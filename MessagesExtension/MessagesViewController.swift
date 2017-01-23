@@ -9,25 +9,33 @@
 import UIKit
 import Messages
 
+import iMessageTools
+
+class MainBackgroundView: UIView {
+    override func draw(_ rect: CGRect) {
+        DesignsStyleKit.drawMainScreenBackground(frame: rect, resizing: .stretch)
+    }
+}
+
+class InsertImageBackgroundView: UIView {
+    override func draw(_ rect: CGRect) {
+        DesignsStyleKit.drawInsertImageBackground(frame: rect, resizing: .stretch)
+    }
+}
+
 class MessagesViewController: MSMessagesAppViewController {
+    
+    var stretchController: StretchViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
     // MARK: - Conversation Handling
     
     override func willBecomeActive(with conversation: MSConversation) {
-        // Called when the extension is about to move from the inactive to active state.
-        // This will happen when the extension is about to present UI.
         
-        // Use this method to configure the extension and restore previously stored state.
     }
     
     override func didResignActive(with conversation: MSConversation) {
@@ -68,5 +76,21 @@ class MessagesViewController: MSMessagesAppViewController {
     
         // Use this method to finalize any behaviors associated with the change in presentation style.
     }
-
+    
+    @IBAction func startPressed(sender: Any) {
+        let controller = storyboard!.instantiateViewController(withIdentifier: "StretchViewController") as! StretchViewController
+        stretchController = controller
+        controller.messageSender = self
+        controller.orientationManager = self
+        present(controller)
+        
+        requestPresentationStyle(.expanded)
+    }
+    
+    func dismissStretchController() {
+        if let controller = stretchController {
+            throwAway(controller: controller)
+        }
+        stretchController = nil
+    }
 }
