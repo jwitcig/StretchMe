@@ -48,7 +48,7 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
     @IBAction func stretchPressed(sender: Any) {
         textField.resignFirstResponder()
         
-        let size = CGSize(width: 200, height: 600)
+        let size = CGSize(width: 200, height: 400)
         let stretch = StretchView(frame: CGRect(origin: .zero, size: size), text: text)
     
         guard let image = renderImage(from: stretch) else { return }
