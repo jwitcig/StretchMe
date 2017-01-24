@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>289486286682-ltoldk2nkos0uvp44b7rhog9jmi5l9l5.apps.googleusercontent.com</string>
+	<string>289486286682-eudgg6ak3evf0mrrbrnl9kdcdsvimg7r.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.289486286682-ltoldk2nkos0uvp44b7rhog9jmi5l9l5</string>
+	<string>com.googleusercontent.apps.289486286682-eudgg6ak3evf0mrrbrnl9kdcdsvimg7r</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDp8JJ0452qp9bxp-CuJOHsmq-9gxnZh54</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.jwitapps.StretchMe.MessagesExtension</string>
+	<string>com.jwitapps.StretchMe</string>
 	<key>PROJECT_ID</key>
 	<string>stretchme-2fdc7</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:289486286682:ios:f028fdf4f2a212d8</string>
+	<string>1:289486286682:ios:9743a7c536c34273</string>
 	<key>DATABASE_URL</key>
 	<string>https://stretchme-2fdc7.firebaseio.com</string>
 </dict>

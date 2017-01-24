@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		0028E01AA3D88DA3DA9E18A9 /* Pods_MessagesExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472ECB1337143FD2570CA483 /* Pods_MessagesExtension.framework */; };
 		8B1B4B471E36566A00C618CA /* DesignsStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B4B461E36566A00C618CA /* DesignsStyleKit.swift */; };
-		8B1B4B491E36602400C618CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B4B481E36602400C618CA /* GoogleService-Info.plist */; };
 		8BAA9CD81E36F4CF0098A6D6 /* StretchStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAA9CD71E36F4CF0098A6D6 /* StretchStyleKit.swift */; };
+		8BAA9CDA1E36FB390098A6D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA9CD91E36FB390098A6D6 /* GoogleService-Info.plist */; };
 		8BD1C1D81E361EEF0004C04E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD1C1D71E361EEF0004C04E /* Assets.xcassets */; };
 		8BD1C1DF1E361EEF0004C04E /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8BD1C1DE1E361EEF0004C04E /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8BD1C1E41E361EEF0004C04E /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD1C1E31E361EEF0004C04E /* Messages.framework */; };
@@ -51,8 +51,8 @@
 		3646FB714816654E68652319 /* Pods-MessagesExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension.release.xcconfig"; sourceTree = "<group>"; };
 		472ECB1337143FD2570CA483 /* Pods_MessagesExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagesExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1B4B461E36566A00C618CA /* DesignsStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignsStyleKit.swift; sourceTree = "<group>"; };
-		8B1B4B481E36602400C618CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8BAA9CD71E36F4CF0098A6D6 /* StretchStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchStyleKit.swift; sourceTree = "<group>"; };
+		8BAA9CD91E36FB390098A6D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8BD1C1D41E361EEF0004C04E /* Stretcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stretcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD1C1D71E361EEF0004C04E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BD1C1D91E361EEF0004C04E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		8BD1C1E51E361EEF0004C04E /* MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
-				8B1B4B481E36602400C618CA /* GoogleService-Info.plist */,
+				8BAA9CD91E36FB390098A6D6 /* GoogleService-Info.plist */,
 				8BD1C1E61E361EEF0004C04E /* MessagesViewController.swift */,
 				8BD1C1F71E361F750004C04E /* StretchViewController.swift */,
 				8B1B4B461E36566A00C618CA /* DesignsStyleKit.swift */,
@@ -252,7 +252,7 @@
 			files = (
 				8BD1C1EC1E361EEF0004C04E /* Assets.xcassets in Resources */,
 				8BD1C1EA1E361EEF0004C04E /* MainInterface.storyboard in Resources */,
-				8B1B4B491E36602400C618CA /* GoogleService-Info.plist in Resources */,
+				8BAA9CDA1E36FB390098A6D6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
