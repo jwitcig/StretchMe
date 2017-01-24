@@ -10,6 +10,8 @@ import UIKit
 
 import iMessageTools
 
+import FirebaseAnalytics
+
 class StretchViewController: UIViewController, UITextFieldDelegate {
 
     var messageSender: MessagesViewController!
@@ -47,11 +49,9 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func stretchPressed(sender: Any) {
         textField.resignFirstResponder()
-        
-        let size = CGSize(width: 200, height: 400)
-        let stretch = StretchView(frame: CGRect(origin: .zero, size: size), text: text)
-    
-        guard let image = renderImage(from: stretch) else { return }
+
+        let image = StretchStyleKit.imageOfStretch2(stretchText: text)
+
         do {
             let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
             let fileURL = documentsURL.appendingPathComponent("image.png")
@@ -74,6 +74,11 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
             }
             
         } catch { }
+        
+        let params = [
+            kFIRParameterValue: text.characters.count as NSObject
+        ]
+        FIRAnalytics.logEvent(withName: "InsertPressed", parameters: params)
     }
     
     func renderImage(from view: UIView) -> UIImage? {
@@ -86,8 +91,7 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let textSize = (text + "A").size(attributes: [NSFontAttributeName: textField.font as Any])
-        return textSize.width < textField.bounds.size.width
+        return (text as NSString).replacingCharacters(in: range, with: string).characters.count < 30
     }
 }
 

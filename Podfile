@@ -7,6 +7,8 @@ target 'MessagesExtension' do
 
   pod 'iMessageTools'
 
+  pod 'Firebase'
+
   # Pods for MessagesExtension
 
 end

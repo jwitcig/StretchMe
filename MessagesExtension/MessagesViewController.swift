@@ -11,6 +11,8 @@ import Messages
 
 import iMessageTools
 
+import FirebaseAnalytics
+
 class MainBackgroundView: UIView {
     override func draw(_ rect: CGRect) {
         DesignsStyleKit.drawMainScreenBackground(frame: rect, resizing: .stretch)
@@ -23,13 +25,16 @@ class InsertImageBackgroundView: UIView {
     }
 }
 
-class MessagesViewController: MSMessagesAppViewController {
+class MessagesViewController: MSMessagesAppViewController, FirebaseConfigurable {
     
     var stretchController: StretchViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if FIRApp.defaultApp() == nil {
+//            configureFirebase()
+        }
     }
     
     // MARK: - Conversation Handling
@@ -56,7 +61,7 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     override func didStartSending(_ message: MSMessage, conversation: MSConversation) {
-        // Called when the user taps the send button.
+        FIRAnalytics.logEvent(withName: "MessageSent", parameters: nil)
     }
     
     override func didCancelSending(_ message: MSMessage, conversation: MSConversation) {
@@ -85,6 +90,8 @@ class MessagesViewController: MSMessagesAppViewController {
         present(controller)
         
         requestPresentationStyle(.expanded)
+        
+        FIRAnalytics.logEvent(withName: "StartPressed", parameters: nil)
     }
     
     func dismissStretchController() {
@@ -92,5 +99,30 @@ class MessagesViewController: MSMessagesAppViewController {
             throwAway(controller: controller)
         }
         stretchController = nil
+    }
+}
+
+
+public protocol FirebaseConfigurable: class {
+    var servicesFileName: String { get }
+    
+    func configureFirebase()
+}
+
+public extension FirebaseConfigurable {
+    internal var bundle: Bundle {
+        return Bundle(for: type(of: self) as AnyClass)
+    }
+    
+    internal var servicesFileName: String {
+        return bundle.infoDictionary!["Google Services File"] as! String
+    }
+    
+    public func configureFirebase() {
+        guard FIRApp.defaultApp() == nil else { return }
+        
+        let options = FIROptions(contentsOfFile: bundle.path(forResource: servicesFileName, ofType: "plist"))!
+        
+        FIRApp.configure(with: options)
     }
 }

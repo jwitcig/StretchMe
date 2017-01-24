@@ -17,22 +17,22 @@ public class StretchStyleKit : NSObject {
 
     //// Drawing Methods
 
-    public dynamic class func drawStretch(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 142, height: 16), resizing: ResizingBehavior = .aspectFit, stretchText: String = "STRETCH ME") {
+    public dynamic class func drawStretch(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 202, height: 16), resizing: ResizingBehavior = .aspectFit, stretchText: String = "012345678910111213") {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
         //// Resize to Target Frame
         context.saveGState()
-        let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 142, height: 16), target: targetFrame)
+        let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 202, height: 16), target: targetFrame)
         context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
-        context.scaleBy(x: resizedFrame.width / 142, y: resizedFrame.height / 16)
+        context.scaleBy(x: resizedFrame.width / 202, y: resizedFrame.height / 16)
 
 
         //// Text Drawing
-        let textRect = CGRect(x: 0, y: 0, width: 142, height: 16)
+        let textRect = CGRect(x: 0, y: 0, width: 202, height: 16)
         let textStyle = NSMutableParagraphStyle()
         textStyle.alignment = .center
-        let textFontAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: UIFont.labelFontSize), NSForegroundColorAttributeName: UIColor.black, NSParagraphStyleAttributeName: textStyle]
+        let textFontAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: UIFont.systemFontSize), NSForegroundColorAttributeName: UIColor.black, NSParagraphStyleAttributeName: textStyle]
 
         let textTextHeight: CGFloat = stretchText.boundingRect(with: CGSize(width: textRect.width, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: textFontAttributes, context: nil).height
         context.saveGState()
@@ -42,6 +42,50 @@ public class StretchStyleKit : NSObject {
         
         context.restoreGState()
 
+    }
+
+    public dynamic class func drawStretch2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 116, height: 133), resizing: ResizingBehavior = .aspectFit, stretchText: String = "012345678910111213") {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()!
+        
+        //// Resize to Target Frame
+        context.saveGState()
+        let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 116, height: 133), target: targetFrame)
+        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
+        context.scaleBy(x: resizedFrame.width / 116, y: resizedFrame.height / 133)
+
+
+        //// Text Drawing
+        context.saveGState()
+        context.scaleBy(x: 0.38, y: 12.6)
+
+        let textRect = CGRect(x: 0, y: 0, width: 305.26, height: 10.55)
+        let textStyle = NSMutableParagraphStyle()
+        textStyle.alignment = .center
+        let textFontAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: UIFont.systemFontSize), NSForegroundColorAttributeName: UIColor.black, NSParagraphStyleAttributeName: textStyle]
+
+        let textTextHeight: CGFloat = stretchText.boundingRect(with: CGSize(width: textRect.width, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: textFontAttributes, context: nil).height
+        context.saveGState()
+        context.clip(to: textRect)
+        stretchText.draw(in: CGRect(x: textRect.minX, y: textRect.minY + (textRect.height - textTextHeight) / 2, width: textRect.width, height: textTextHeight), withAttributes: textFontAttributes)
+        context.restoreGState()
+
+        context.restoreGState()
+        
+        context.restoreGState()
+
+    }
+
+    //// Generated Images
+
+    public dynamic class func imageOfStretch2(stretchText: String = "012345678910111213") -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 116, height: 133), false, 0)
+            StretchStyleKit.drawStretch2(stretchText: stretchText)
+
+        let imageOfStretch2 = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+
+        return imageOfStretch2
     }
 
 
