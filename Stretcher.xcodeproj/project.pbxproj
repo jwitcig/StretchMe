@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0028E01AA3D88DA3DA9E18A9 /* Pods_MessagesExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472ECB1337143FD2570CA483 /* Pods_MessagesExtension.framework */; };
-		8B1B4B471E36566A00C618CA /* DesignsStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B4B461E36566A00C618CA /* DesignsStyleKit.swift */; };
-		8BAA9CD81E36F4CF0098A6D6 /* StretchStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAA9CD71E36F4CF0098A6D6 /* StretchStyleKit.swift */; };
+		8B2944B0244FF9100084D457 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2944AF244FF9100084D457 /* Protocols.swift */; };
+		8B2944B2244FF93A0084D457 /* iMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2944B1244FF93A0084D457 /* iMessage.swift */; };
+		8B2944B6244FFA510084D457 /* DesignsStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2944B5244FFA510084D457 /* DesignsStyleKit.swift */; };
+		8B2944BA244FFFF00084D457 /* StretchStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2944B9244FFFF00084D457 /* StretchStyleKit.swift */; };
 		8BAA9CDA1E36FB390098A6D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA9CD91E36FB390098A6D6 /* GoogleService-Info.plist */; };
 		8BD1C1D81E361EEF0004C04E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD1C1D71E361EEF0004C04E /* Assets.xcassets */; };
 		8BD1C1DF1E361EEF0004C04E /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8BD1C1DE1E361EEF0004C04E /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -50,8 +52,10 @@
 		25ECA6732AAB3BC510F2AD1B /* Pods-Stretcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stretcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stretcher/Pods-Stretcher.release.xcconfig"; sourceTree = "<group>"; };
 		3646FB714816654E68652319 /* Pods-MessagesExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension.release.xcconfig"; sourceTree = "<group>"; };
 		472ECB1337143FD2570CA483 /* Pods_MessagesExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagesExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B1B4B461E36566A00C618CA /* DesignsStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignsStyleKit.swift; sourceTree = "<group>"; };
-		8BAA9CD71E36F4CF0098A6D6 /* StretchStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchStyleKit.swift; sourceTree = "<group>"; };
+		8B2944AF244FF9100084D457 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		8B2944B1244FF93A0084D457 /* iMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessage.swift; sourceTree = "<group>"; };
+		8B2944B5244FFA510084D457 /* DesignsStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignsStyleKit.swift; sourceTree = "<group>"; };
+		8B2944B9244FFFF00084D457 /* StretchStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchStyleKit.swift; sourceTree = "<group>"; };
 		8BAA9CD91E36FB390098A6D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8BD1C1D41E361EEF0004C04E /* Stretcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stretcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD1C1D71E361EEF0004C04E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,8 +148,10 @@
 				8BAA9CD91E36FB390098A6D6 /* GoogleService-Info.plist */,
 				8BD1C1E61E361EEF0004C04E /* MessagesViewController.swift */,
 				8BD1C1F71E361F750004C04E /* StretchViewController.swift */,
-				8B1B4B461E36566A00C618CA /* DesignsStyleKit.swift */,
-				8BAA9CD71E36F4CF0098A6D6 /* StretchStyleKit.swift */,
+				8B2944B5244FFA510084D457 /* DesignsStyleKit.swift */,
+				8B2944B9244FFFF00084D457 /* StretchStyleKit.swift */,
+				8B2944AF244FF9100084D457 /* Protocols.swift */,
+				8B2944B1244FF93A0084D457 /* iMessage.swift */,
 				8BD1C1E81E361EEF0004C04E /* MainInterface.storyboard */,
 				8BD1C1EB1E361EEF0004C04E /* Assets.xcassets */,
 				8BD1C1ED1E361EEF0004C04E /* Info.plist */,
@@ -165,7 +171,6 @@
 				8BD1C1F31E361EEF0004C04E /* Embed App Extensions */,
 				D3B67935D389242176583F28 /* Frameworks */,
 				B5202BB12E556E5865A7C578 /* [CP] Embed Pods Frameworks */,
-				6C5890D4B00E815787B6D088 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,7 +190,6 @@
 				8BD1C1DA1E361EEF0004C04E /* Sources */,
 				8BD1C1DB1E361EEF0004C04E /* Frameworks */,
 				8BD1C1DC1E361EEF0004C04E /* Resources */,
-				1444F71D0B1C4326221FEBDA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,7 +207,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = JwitApps;
 				TargetAttributes = {
 					8BD1C1D31E361EEF0004C04E = {
@@ -223,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -259,49 +264,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1444F71D0B1C4326221FEBDA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6C5890D4B00E815787B6D088 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stretcher/Pods-Stretcher-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B5202BB12E556E5865A7C578 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stretcher/Pods-Stretcher-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stretcher/Pods-Stretcher-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stretcher/Pods-Stretcher-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B9A301668A53CAD2312F1977 /* [CP] Check Pods Manifest.lock */ = {
@@ -310,13 +294,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MessagesExtension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E731051A517123FB8C8938CE /* [CP] Check Pods Manifest.lock */ = {
@@ -325,13 +312,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stretcher-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -341,10 +331,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B2944B0244FF9100084D457 /* Protocols.swift in Sources */,
 				8BD1C1F81E361F750004C04E /* StretchViewController.swift in Sources */,
+				8B2944BA244FFFF00084D457 /* StretchStyleKit.swift in Sources */,
+				8B2944B6244FFA510084D457 /* DesignsStyleKit.swift in Sources */,
 				8BD1C1E71E361EEF0004C04E /* MessagesViewController.swift in Sources */,
-				8BAA9CD81E36F4CF0098A6D6 /* StretchStyleKit.swift in Sources */,
-				8B1B4B471E36566A00C618CA /* DesignsStyleKit.swift in Sources */,
+				8B2944B2244FF93A0084D457 /* iMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,20 +366,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -424,20 +425,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -471,11 +481,12 @@
 				DEVELOPMENT_TEAM = 349WFX4WJR;
 				GOOGLE_SERVICES_FILE = "GoogleService-Info-Dev";
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwitapps.StretchMe.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -487,11 +498,12 @@
 				DEVELOPMENT_TEAM = 349WFX4WJR;
 				GOOGLE_SERVICES_FILE = "GoogleService-Info";
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwitapps.StretchMe.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -503,9 +515,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 349WFX4WJR;
 				INFOPLIST_FILE = Stretcher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwitapps.StretchMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -517,9 +530,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 349WFX4WJR;
 				INFOPLIST_FILE = Stretcher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwitapps.StretchMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

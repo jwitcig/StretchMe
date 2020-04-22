@@ -9,8 +9,7 @@
 import UIKit
 import Messages
 
-import iMessageTools
-
+import Firebase
 import FirebaseAnalytics
 
 class MainBackgroundView: UIView {
@@ -32,7 +31,7 @@ class MessagesViewController: MSMessagesAppViewController, FirebaseConfigurable 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if FIRApp.defaultApp() == nil {
+        if FirebaseApp.app() == nil {
             configureFirebase()
         }
     }
@@ -61,7 +60,7 @@ class MessagesViewController: MSMessagesAppViewController, FirebaseConfigurable 
     }
     
     override func didStartSending(_ message: MSMessage, conversation: MSConversation) {
-        FIRAnalytics.logEvent(withName: "MessageSent", parameters: nil)
+        Analytics.logEvent("MessageSent", parameters: nil)
     }
     
     override func didCancelSending(_ message: MSMessage, conversation: MSConversation) {
@@ -91,13 +90,11 @@ class MessagesViewController: MSMessagesAppViewController, FirebaseConfigurable 
         
         requestPresentationStyle(.expanded)
         
-        FIRAnalytics.logEvent(withName: "StartPressed", parameters: nil)
+        Analytics.logEvent("StartPressed", parameters: nil)
     }
     
     func dismissStretchController() {
-        if let controller = stretchController {
-            throwAway(controller: controller)
-        }
+        stretchController?.removeFromParent()
         stretchController = nil
     }
 }
@@ -118,11 +115,10 @@ public extension FirebaseConfigurable {
         return bundle.infoDictionary!["Google Services File"] as! String
     }
     
-    public func configureFirebase() {
-        guard FIRApp.defaultApp() == nil else { return }
-        
-        let options = FIROptions(contentsOfFile: bundle.path(forResource: servicesFileName, ofType: "plist"))!
-        
-        FIRApp.configure(with: options)
+    func configureFirebase() {
+        guard FirebaseApp.app() == nil else { return }
+        let path = Bundle.main.path(forResource: servicesFileName, ofType: ".plist")!
+        let options = FirebaseOptions(contentsOfFile: path)!
+        FirebaseApp.configure(options: options)
     }
 }

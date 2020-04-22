@@ -8,8 +8,6 @@
 
 import UIKit
 
-import iMessageTools
-
 import FirebaseAnalytics
 
 class StretchViewController: UIViewController, UITextFieldDelegate {
@@ -34,15 +32,15 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
         textField.addTarget(self, action: #selector(StretchViewController.textChanged(textField:)), for: .editingChanged)
     }
     
-    func textChanged(textField: UITextField) {
-        stretchButton.isEnabled = text.characters.count > 0
+    @objc func textChanged(textField: UITextField) {
+        stretchButton.isEnabled = text.count > 0
         
         text = text.uppercased()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         let delay = DispatchTime.now() + 0.5
-        DispatchQueue.main.asyncAfter(deadline: delay) { 
+        DispatchQueue.main.asyncAfter(deadline: delay) {
             self.textField.becomeFirstResponder()
         }
     }
@@ -50,13 +48,20 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
     @IBAction func stretchPressed(sender: Any) {
         textField.resignFirstResponder()
 
-        let image = StretchStyleKit.imageOfStretch2(stretchText: text)
+        let textColor: UIColor
+        switch traitCollection.userInterfaceStyle {
+        case .light: textColor = .black
+        case .dark: textColor = .gray
+        default: textColor = .gray
+        }
+        
+        let image = StretchStyleKit.imageOfStretchText(textColor: textColor, stretchText: text)
 
         do {
             let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
             let fileURL = documentsURL.appendingPathComponent("image.png")
            
-            if let data = UIImagePNGRepresentation(image) {
+            if let data = image.pngData() {
                 try data.write(to: fileURL, options: .atomic)
             }
         
@@ -76,9 +81,9 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
         } catch { }
         
         let params = [
-            kFIRParameterValue: text.characters.count as NSObject
+            AnalyticsParameterValue: text.count as NSObject
         ]
-        FIRAnalytics.logEvent(withName: "InsertPressed", parameters: params)
+        Analytics.logEvent("InsertPressed", parameters: params)
     }
     
     func renderImage(from view: UIView) -> UIImage? {
@@ -91,7 +96,7 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        return (text as NSString).replacingCharacters(in: range, with: string).characters.count < 30
+        return (text as NSString).replacingCharacters(in: range, with: string).count < 30
     }
 }
 
