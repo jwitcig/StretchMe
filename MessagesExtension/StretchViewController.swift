@@ -47,15 +47,8 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func stretchPressed(sender: Any) {
         textField.resignFirstResponder()
-
-        let textColor: UIColor
-        switch traitCollection.userInterfaceStyle {
-        case .light: textColor = .black
-        case .dark: textColor = .gray
-        default: textColor = .gray
-        }
         
-        let image = StretchStyleKit.imageOfStretchText(textColor: textColor, stretchText: text)
+        let image = StretchStyleKit.imageOfStretchText(textColor: .gray, stretchText: text)
 
         do {
             let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
