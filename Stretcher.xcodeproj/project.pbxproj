@@ -13,6 +13,7 @@
 		0A353E03D16C2E1110BA13E1 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C9D1EBA5EC239B9FB1832D /* MainInterface.storyboard */; };
 		256C45FDA0852FCE299DE0B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF3F61874F857040BA4E3690 /* Assets.xcassets */; };
 		2763E8355B2D9799AFA07888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 685A2F3F80C2D663DE2E0C06 /* Assets.xcassets */; };
+		32EA9A7E0988AC628F08D0FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632420919EA9E172C34EA48F /* AppDelegate.swift */; };
 		98FEEB1E7F2100179B53C7D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C65A8CDA2F69116EB178C9B /* GoogleService-Info.plist */; };
 		A7BF1FA89881B0A4F4E95B77 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D273B0F5E4424925DE90C7DA /* FirebaseAnalytics */; };
 		BF7753A6BE805D5747A3FFF1 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A679F368BE3C6C35D649811F /* MessagesViewController.swift */; };
@@ -48,6 +49,7 @@
 		056DD1FD6DCD8902414B2974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		05B0117F328A3347AB9F44E2 /* MessagesExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = MessagesExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C65A8CDA2F69116EB178C9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		632420919EA9E172C34EA48F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		685A2F3F80C2D663DE2E0C06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A679F368BE3C6C35D649811F /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		BE37AA90E6D0895075915035 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Messages.framework; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		E224FCF08700C7919F647144 /* Stretcher */ = {
 			isa = PBXGroup;
 			children = (
+				632420919EA9E172C34EA48F /* AppDelegate.swift */,
 				685A2F3F80C2D663DE2E0C06 /* Assets.xcassets */,
 				056DD1FD6DCD8902414B2974 /* Info.plist */,
 			);
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32EA9A7E0988AC628F08D0FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
