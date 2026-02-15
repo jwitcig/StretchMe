@@ -70,3 +70,16 @@ schemes:
       config: Debug
     archive:
       config: Release
+  TextendMessages:
+    build:
+      targets:
+        MessagesExtension: all
+        Textend: all
+    run:
+      config: Debug
+      executable: MessagesExtension
+    profile:
+      config: Release
+      executable: Textend
+    archive:
+      config: Release
