@@ -145,7 +145,7 @@
 			);
 			productName = MessagesExtension;
 			productReference = 1F98184307A9B5E5A70889F4 /* MessagesExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
+			productType = "com.apple.product-type.app-extension.messages";
 		};
 		959FE7D546E03988D3348CFA /* Textend */ = {
 			isa = PBXNativeTarget;
@@ -264,6 +264,7 @@
 		24C1C18A2A4C23392B97FD79 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Messages Icon";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\".\"",
@@ -381,6 +382,7 @@
 		D5C0C1DAB03EE4FF05BD96C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Messages Icon";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\".\"",

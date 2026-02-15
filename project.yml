@@ -18,7 +18,7 @@ settings:
     MARKETING_VERSION: 1.1
 targets:
   MessagesExtension:
-    type: app-extension
+    type: app-extension.messages
     platform: iOS
     deploymentTarget: "12.0"
     info:
@@ -27,6 +27,7 @@ targets:
         CFBundleShortVersionString: "1.1"
         CFBundleVersion: "1.1"
         CFBundleDisplayName: Textend
+        MSMessagesExtensionStoreIconName: Messages Icon
         NSExtension:
           NSExtensionAttributes: {}
           NSExtensionMainStoryboard: MainInterface
@@ -40,6 +41,7 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.jwitapps.textend.MessagesExtension
+        ASSETCATALOG_COMPILER_APPICON_NAME: Messages Icon
 
   Textend:
     type: application.messages
