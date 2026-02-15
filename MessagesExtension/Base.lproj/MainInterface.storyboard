@@ -83,9 +83,7 @@
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEh-EJ-PiO">
                                 <rect key="frame" x="102.5" y="148" width="170" height="63"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="insertButton"/>
-                                <state key="disabled" image="insertButtonDisabled"/>
-                                <state key="highlighted" image="insertButtonDepressed"/>
+                                <state key="normal" title="Insert"/>
                                 <connections>
                                     <action selector="textendPressedWithSender:" destination="zLS-4c-Tdp" eventType="touchUpInside" id="3Xm-iq-Z3B"/>
                                 </connections>
@@ -116,8 +114,5 @@
     <resources>
         <image name="generateButton" width="170" height="63"/>
         <image name="generateButtonDepressed" width="170" height="63"/>
-        <image name="insertButton" width="170" height="63"/>
-        <image name="insertButtonDepressed" width="170" height="63"/>
-        <image name="insertButtonDisabled" width="170" height="63"/>
     </resources>
 </document>
