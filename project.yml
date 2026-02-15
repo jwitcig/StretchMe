@@ -42,7 +42,7 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.jwitapps.textend.MessagesExtension
 
   Textend:
-    type: application
+    type: application.messages
     platform: iOS
     deploymentTarget: "12.0"
     info:
@@ -52,6 +52,8 @@ targets:
         CFBundleVersion: "1.1"
     sources:
       - path: Textend
+        excludes:
+          - AppDelegate.swift
     dependencies:
       - target: MessagesExtension
         embed: true
