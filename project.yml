@@ -1,0 +1,126 @@
+name: Stretcher
+options:
+  createIntermediateGroups: true
+configs:
+  Debug: debug
+  Release: release
+settings:
+  base:
+    SWIFT_VERSION: 5.0
+    IPHONEOS_DEPLOYMENT_TARGET: 12.0
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": arm64
+    DEVELOPMENT_TEAM: 349WFX4WJR
+    CURRENT_PROJECT_VERSION: 1
+    MARKETING_VERSION: 1.1
+targets:
+  GoogleToolboxForMac:
+    type: framework
+    platform: iOS
+    deploymentTarget: "12.0"
+    sources:
+      - path: Pods/GoogleToolboxForMac/Foundation
+      - path: Pods/GoogleToolboxForMac/GTMDefines.h
+    settings:
+      base:
+        PRODUCT_MODULE_NAME: GoogleToolboxForMac
+        DEFINES_MODULE: YES
+        CLANG_ENABLE_MODULES: YES
+        OTHER_CFLAGS: "$(inherited) -DOS_OBJECT_USE_OBJC=0"
+    scheme: false
+
+  JWSwiftTools:
+    type: framework
+    platform: iOS
+    deploymentTarget: "12.0"
+    sources:
+      - path: Pods/JWSwiftTools/SwiftTools
+        excludes:
+          - Info.plist
+          - SwiftTools.h
+    settings:
+      base:
+        PRODUCT_MODULE_NAME: JWSwiftTools
+        DEFINES_MODULE: YES
+    scheme: false
+
+  iMessageTools:
+    type: framework
+    platform: iOS
+    deploymentTarget: "12.0"
+    sources:
+      - path: Pods/iMessageTools/iMessagePack
+        excludes:
+          - Info.plist
+          - iMessagePack.h
+    dependencies:
+      - target: JWSwiftTools
+    settings:
+      base:
+        PRODUCT_MODULE_NAME: iMessageTools
+        DEFINES_MODULE: YES
+    scheme: false
+
+  MessagesExtension:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: "12.0"
+    info:
+      path: MessagesExtension/Info.plist
+      properties:
+        CFBundleShortVersionString: "1.1"
+        CFBundleVersion: "1"
+    sources:
+      - path: MessagesExtension
+    dependencies:
+      - target: GoogleToolboxForMac
+        embed: true
+      - target: JWSwiftTools
+        embed: true
+      - target: iMessageTools
+        embed: true
+      - framework: Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework
+        embed: true
+      - framework: Pods/FirebaseCore/Frameworks/frameworks/FirebaseCore.framework
+        embed: true
+      - framework: Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework
+        embed: true
+      - framework: Pods/GoogleInterchangeUtilities/Frameworks/frameworks/GoogleInterchangeUtilities.framework
+        embed: true
+      - framework: Pods/GoogleSymbolUtilities/Frameworks/frameworks/GoogleSymbolUtilities.framework
+        embed: true
+      - framework: Messages.framework
+      - framework: StoreKit.framework
+      - framework: SystemConfiguration.framework
+      - framework: AddressBook.framework
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jwitapps.StretchMe.MessagesExtension
+        OTHER_LDFLAGS: "$(inherited) -ObjC -lc++ -lsqlite3 -lz"
+
+  Stretcher:
+    type: application
+    platform: iOS
+    deploymentTarget: "12.0"
+    info:
+      path: Stretcher/Info.plist
+      properties:
+        CFBundleShortVersionString: "1.1"
+        CFBundleVersion: "1"
+    sources:
+      - path: Stretcher
+    dependencies:
+      - target: MessagesExtension
+        embed: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jwitapps.StretchMe
+
+schemes:
+  Release:
+    build:
+      targets:
+        Stretcher: all
+    run:
+      config: Release
+    archive:
+      config: Release
