@@ -30,7 +30,7 @@
                                         <state key="normal" image="generateButton"/>
                                         <state key="highlighted" image="generateButtonDepressed"/>
                                         <connections>
-                                            <action selector="startPressedWithSender:" destination="ObA-dk-sSI" eventType="touchUpInside" id="LjF-wY-lBm"/>
+                                            <action selector="textendPressedWithSender:" destination="ObA-dk-sSI" eventType="touchUpInside" id="LjF-wY-lBm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="68.799999999999997" y="142.1289355322339"/>
         </scene>
-        <!--Stretch View Controller-->
+        <!--Textend View Controller-->
         <scene sceneID="ngY-Qc-n2H">
             <objects>
-                <viewController storyboardIdentifier="StretchViewController" id="zLS-4c-Tdp" customClass="StretchViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TextendViewController" id="zLS-4c-Tdp" customClass="TextendViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hjL-Up-6gO"/>
                         <viewControllerLayoutGuide type="bottom" id="VSz-ro-fHW"/>
@@ -87,7 +87,7 @@
                                 <state key="disabled" image="insertButtonDisabled"/>
                                 <state key="highlighted" image="insertButtonDepressed"/>
                                 <connections>
-                                    <action selector="stretchPressedWithSender:" destination="zLS-4c-Tdp" eventType="touchUpInside" id="3Xm-iq-Z3B"/>
+                                    <action selector="textendPressedWithSender:" destination="zLS-4c-Tdp" eventType="touchUpInside" id="3Xm-iq-Z3B"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -104,7 +104,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="stretchButton" destination="uEh-EJ-PiO" id="D3A-Aj-czR"/>
+                        <outlet property="textendButton" destination="uEh-EJ-PiO" id="D3A-Aj-czR"/>
                         <outlet property="textField" destination="tbg-XP-eZR" id="YI5-qT-0PX"/>
                     </connections>
                 </viewController>

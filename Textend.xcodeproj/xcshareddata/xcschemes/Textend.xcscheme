@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C8A124C9AB07858B23CCF794"
-               BuildableName = "Stretcher.app"
-               BlueprintName = "Stretcher"
-               ReferencedContainer = "container:Stretcher.xcodeproj">
+               BlueprintIdentifier = "959FE7D546E03988D3348CFA"
+               BuildableName = "Textend.app"
+               BlueprintName = "Textend"
+               ReferencedContainer = "container:Textend.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,17 +32,17 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C8A124C9AB07858B23CCF794"
-            BuildableName = "Stretcher.app"
-            BlueprintName = "Stretcher"
-            ReferencedContainer = "container:Stretcher.xcodeproj">
+            BlueprintIdentifier = "959FE7D546E03988D3348CFA"
+            BuildableName = "Textend.app"
+            BlueprintName = "Textend"
+            ReferencedContainer = "container:Textend.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C8A124C9AB07858B23CCF794"
-            BuildableName = "Stretcher.app"
-            BlueprintName = "Stretcher"
-            ReferencedContainer = "container:Stretcher.xcodeproj">
+            BlueprintIdentifier = "959FE7D546E03988D3348CFA"
+            BuildableName = "Textend.app"
+            BlueprintName = "Textend"
+            ReferencedContainer = "container:Textend.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C8A124C9AB07858B23CCF794"
-            BuildableName = "Stretcher.app"
-            BlueprintName = "Stretcher"
-            ReferencedContainer = "container:Stretcher.xcodeproj">
+            BlueprintIdentifier = "959FE7D546E03988D3348CFA"
+            BuildableName = "Textend.app"
+            BlueprintName = "Textend"
+            ReferencedContainer = "container:Textend.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

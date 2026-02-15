@@ -1,6 +1,6 @@
 //
-//  StretchStyleKit.swift
-//  StretchMe
+//  TextendStyleKit.swift
+//  Textend
 //
 //  Created by KTJW on 1/23/17.
 //  Copyright © 2017 KTJW. All rights reserved.
@@ -13,11 +13,11 @@
 
 import UIKit
 
-public class StretchStyleKit : NSObject {
+public class TextendStyleKit : NSObject {
 
     //// Drawing Methods
 
-    public dynamic class func drawStretch(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 202, height: 16), resizing: ResizingBehavior = .aspectFit, stretchText: String = "012345678910111213") {
+    public dynamic class func drawTextend(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 202, height: 16), resizing: ResizingBehavior = .aspectFit, textendText: String = "012345678910111213") {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -34,17 +34,17 @@ public class StretchStyleKit : NSObject {
         textStyle.alignment = .center
         let textFontAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: UIFont.systemFontSize), NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.paragraphStyle: textStyle]
 
-        let textTextHeight: CGFloat = stretchText.boundingRect(with: CGSize(width: textRect.width, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: textFontAttributes, context: nil).height
+        let textTextHeight: CGFloat = textendText.boundingRect(with: CGSize(width: textRect.width, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: textFontAttributes, context: nil).height
         context.saveGState()
         context.clip(to: textRect)
-        stretchText.draw(in: CGRect(x: textRect.minX, y: textRect.minY + (textRect.height - textTextHeight) / 2, width: textRect.width, height: textTextHeight), withAttributes: textFontAttributes)
+        textendText.draw(in: CGRect(x: textRect.minX, y: textRect.minY + (textRect.height - textTextHeight) / 2, width: textRect.width, height: textTextHeight), withAttributes: textFontAttributes)
         context.restoreGState()
         
         context.restoreGState()
 
     }
 
-    public dynamic class func drawStretch2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 116, height: 133), resizing: ResizingBehavior = .aspectFit, stretchText: String = "012345678910111213") {
+    public dynamic class func drawTextend2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 116, height: 133), resizing: ResizingBehavior = .aspectFit, textendText: String = "012345678910111213") {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -64,10 +64,10 @@ public class StretchStyleKit : NSObject {
         textStyle.alignment = .center
         let textFontAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: UIFont.systemFontSize), NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.paragraphStyle: textStyle]
 
-        let textTextHeight: CGFloat = stretchText.boundingRect(with: CGSize(width: textRect.width, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: textFontAttributes, context: nil).height
+        let textTextHeight: CGFloat = textendText.boundingRect(with: CGSize(width: textRect.width, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: textFontAttributes, context: nil).height
         context.saveGState()
         context.clip(to: textRect)
-        stretchText.draw(in: CGRect(x: textRect.minX, y: textRect.minY + (textRect.height - textTextHeight) / 2, width: textRect.width, height: textTextHeight), withAttributes: textFontAttributes)
+        textendText.draw(in: CGRect(x: textRect.minX, y: textRect.minY + (textRect.height - textTextHeight) / 2, width: textRect.width, height: textTextHeight), withAttributes: textFontAttributes)
         context.restoreGState()
 
         context.restoreGState()
@@ -78,14 +78,14 @@ public class StretchStyleKit : NSObject {
 
     //// Generated Images
 
-    public dynamic class func imageOfStretch2(stretchText: String = "012345678910111213") -> UIImage {
+    public dynamic class func imageOfTextend2(textendText: String = "012345678910111213") -> UIImage {
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 116, height: 133), false, 0)
-            StretchStyleKit.drawStretch2(stretchText: stretchText)
+            TextendStyleKit.drawTextend2(textendText: textendText)
 
-        let imageOfStretch2 = UIGraphicsGetImageFromCurrentImageContext()!
+        let imageOfTextend2 = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
 
-        return imageOfStretch2
+        return imageOfTextend2
     }
 
 

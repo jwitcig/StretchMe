@@ -1,6 +1,6 @@
 //
-//  StretchViewController.swift
-//  Stretcher
+//  TextendViewController.swift
+//  Textend
 //
 //  Created by Developer on 1/23/17.
 //  Copyright © 2017 JwitApps. All rights reserved.
@@ -10,13 +10,13 @@ import UIKit
 
 import FirebaseAnalytics
 
-class StretchViewController: UIViewController, UITextFieldDelegate {
+class TextendViewController: UIViewController, UITextFieldDelegate {
 
     var messageSender: MessagesViewController!
     
     @IBOutlet weak var textField: UITextField!
     
-    @IBOutlet weak var stretchButton: UIButton!
+    @IBOutlet weak var textendButton: UIButton!
     
     var imageView: UIImageView?
     
@@ -28,11 +28,11 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        textField.addTarget(self, action: #selector(StretchViewController.textChanged(textField:)), for: .editingChanged)
+        textField.addTarget(self, action: #selector(TextendViewController.textChanged(textField:)), for: .editingChanged)
     }
     
     @objc func textChanged(textField: UITextField) {
-        stretchButton.isEnabled = text.count > 0
+        textendButton.isEnabled = text.count > 0
         
         text = text.uppercased()
     }
@@ -44,10 +44,10 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func stretchPressed(sender: Any) {
+    @IBAction func textendPressed(sender: Any) {
         textField.resignFirstResponder()
 
-        let image = StretchStyleKit.imageOfStretch2(stretchText: text)
+        let image = TextendStyleKit.imageOfTextend2(textendText: text)
 
         do {
             let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -66,7 +66,7 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
                 
                 DispatchQueue.main.sync {
                     self.messageSender.requestPresentationStyle(.compact)
-                    self.messageSender.dismissStretchController()
+                    self.messageSender.dismissTextendController()
                 }
             }
             
@@ -92,7 +92,7 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-class StretchView: UIView {
+class TextendView: UIView {
     let text: String
     
     init(frame: CGRect, text: String) {
@@ -106,6 +106,6 @@ class StretchView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        StretchStyleKit.drawStretch(frame: rect, resizing: .stretch, stretchText: text)
+        TextendStyleKit.drawTextend(frame: rect, resizing: .stretch, textendText: text)
     }
 }

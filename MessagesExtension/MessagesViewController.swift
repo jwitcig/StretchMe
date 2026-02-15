@@ -26,7 +26,7 @@ class InsertImageBackgroundView: UIView {
 
 class MessagesViewController: MSMessagesAppViewController, FirebaseConfigurable {
     
-    var stretchController: StretchViewController?
+    var textendController: TextendViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,25 +81,25 @@ class MessagesViewController: MSMessagesAppViewController, FirebaseConfigurable 
         // Use this method to finalize any behaviors associated with the change in presentation style.
     }
     
-    @IBAction func startPressed(sender: Any) {
-        let controller = storyboard!.instantiateViewController(withIdentifier: "StretchViewController") as! StretchViewController
-        stretchController = controller
+    @IBAction func textendPressed(sender: Any) {
+        let controller = storyboard!.instantiateViewController(withIdentifier: "TextendViewController") as! TextendViewController
+        textendController = controller
         controller.messageSender = self
-        presentStretch(controller)
+        presentTextend(controller)
         
         requestPresentationStyle(.expanded)
         
         Analytics.logEvent("StartPressed", parameters: nil)
     }
     
-    func dismissStretchController() {
-        if let controller = stretchController {
-            dismissStretch(controller)
+    func dismissTextendController() {
+        if let controller = textendController {
+            dismissTextend(controller)
         }
-        stretchController = nil
+        textendController = nil
     }
 
-    private func presentStretch(_ controller: UIViewController) {
+    private func presentTextend(_ controller: UIViewController) {
         children.forEach { child in
             child.willMove(toParent: nil)
             child.view.removeFromSuperview()
@@ -120,7 +120,7 @@ class MessagesViewController: MSMessagesAppViewController, FirebaseConfigurable 
         controller.didMove(toParent: self)
     }
 
-    private func dismissStretch(_ controller: UIViewController) {
+    private func dismissTextend(_ controller: UIViewController) {
         guard controller.parent != nil else { return }
         controller.willMove(toParent: nil)
         controller.view.removeFromSuperview()

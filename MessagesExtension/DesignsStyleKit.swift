@@ -1,6 +1,6 @@
 //
 //  DesignsStyleKit.swift
-//  StretchMe
+//  textend
 //
 //  Created by KtJW on 1/23/17.
 //  Copyright © 2017 KTJW. All rights reserved.
