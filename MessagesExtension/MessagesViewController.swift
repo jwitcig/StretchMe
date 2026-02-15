@@ -9,8 +9,7 @@
 import UIKit
 import Messages
 
-import iMessageTools
-
+import FirebaseCore
 import FirebaseAnalytics
 
 class MainBackgroundView: UIView {
@@ -32,7 +31,7 @@ class MessagesViewController: MSMessagesAppViewController, FirebaseConfigurable 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if FIRApp.defaultApp() == nil {
+        if FirebaseApp.app() == nil {
             configureFirebase()
         }
     }
@@ -61,7 +60,7 @@ class MessagesViewController: MSMessagesAppViewController, FirebaseConfigurable 
     }
     
     override func didStartSending(_ message: MSMessage, conversation: MSConversation) {
-        FIRAnalytics.logEvent(withName: "MessageSent", parameters: nil)
+        Analytics.logEvent("MessageSent", parameters: nil)
     }
     
     override func didCancelSending(_ message: MSMessage, conversation: MSConversation) {
@@ -86,19 +85,46 @@ class MessagesViewController: MSMessagesAppViewController, FirebaseConfigurable 
         let controller = storyboard!.instantiateViewController(withIdentifier: "StretchViewController") as! StretchViewController
         stretchController = controller
         controller.messageSender = self
-        controller.orientationManager = self
-        present(controller)
+        presentStretch(controller)
         
         requestPresentationStyle(.expanded)
         
-        FIRAnalytics.logEvent(withName: "StartPressed", parameters: nil)
+        Analytics.logEvent("StartPressed", parameters: nil)
     }
     
     func dismissStretchController() {
         if let controller = stretchController {
-            throwAway(controller: controller)
+            dismissStretch(controller)
         }
         stretchController = nil
+    }
+
+    private func presentStretch(_ controller: UIViewController) {
+        children.forEach { child in
+            child.willMove(toParent: nil)
+            child.view.removeFromSuperview()
+            child.removeFromParent()
+        }
+
+        addChild(controller)
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(controller.view)
+
+        NSLayoutConstraint.activate([
+            controller.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            controller.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            controller.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            controller.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+        ])
+
+        controller.didMove(toParent: self)
+    }
+
+    private func dismissStretch(_ controller: UIViewController) {
+        guard controller.parent != nil else { return }
+        controller.willMove(toParent: nil)
+        controller.view.removeFromSuperview()
+        controller.removeFromParent()
     }
 }
 
@@ -119,10 +145,12 @@ public extension FirebaseConfigurable {
     }
     
     public func configureFirebase() {
-        guard FIRApp.defaultApp() == nil else { return }
+        guard FirebaseApp.app() == nil else { return }
+        guard let optionsPath = bundle.path(forResource: servicesFileName, ofType: "plist"),
+              let options = FirebaseOptions(contentsOfFile: optionsPath) else {
+            return
+        }
         
-        let options = FIROptions(contentsOfFile: bundle.path(forResource: servicesFileName, ofType: "plist"))!
-        
-        FIRApp.configure(with: options)
+        FirebaseApp.configure(options: options)
     }
 }

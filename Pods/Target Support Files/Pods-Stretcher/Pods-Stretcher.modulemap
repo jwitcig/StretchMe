@@ -1,6 +1,0 @@
-framework module Pods_Stretcher {
-  umbrella header "Pods-Stretcher-umbrella.h"
-
-  export *
-  module * { export * }
-}

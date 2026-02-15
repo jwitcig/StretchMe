@@ -9,99 +9,24 @@
 /* Begin PBXBuildFile section */
 		008204F584469A6EFFBCE5AA /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE37AA90E6D0895075915035 /* Messages.framework */; };
 		02C26137D19EDE02C3638248 /* MessagesExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 05B0117F328A3347AB9F44E2 /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		087EBD08DE03E415D824DE85 /* GoogleSymbolUtilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D189EEA3667FFF0D0D2F6F50 /* GoogleSymbolUtilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09BE7119E441104F198267E0 /* StretchStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0BF10E8280ECC3D7DFD1EC /* StretchStyleKit.swift */; };
 		0A353E03D16C2E1110BA13E1 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C9D1EBA5EC239B9FB1832D /* MainInterface.storyboard */; };
-		1558AC465BC822574B125F7E /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 983B61764602B252851FD600 /* FirebaseInstanceID.framework */; };
-		1CCCDDD9EFE3ADCE581EC6CC /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49A8ED266D1276DB31449 /* LocationHandler.swift */; };
-		215C015AFEA3113D741537A0 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2002805ACD6F1B5BD5448296 /* Messages.swift */; };
 		256C45FDA0852FCE299DE0B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF3F61874F857040BA4E3690 /* Assets.xcassets */; };
 		2763E8355B2D9799AFA07888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 685A2F3F80C2D663DE2E0C06 /* Assets.xcassets */; };
-		2A06C5C0BA5E0E24BCD41324 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F87A829E8E1DA0B1A8D1E12 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2F8CBB692190CBB40D3235AD /* FirebaseCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 708C863B32DC48BB188104F1 /* FirebaseCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		33DE0767317D3994BD1EECFB /* Session-Structure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A70808DD4FC2315CF65D223 /* Session-Structure.swift */; };
-		3878E67DD10581D768B8BA34 /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 4503DBE1183612A0B0E0FB0B /* GTMNSData+zlib.m */; };
-		4538DACBA790A531DFD63BF5 /* Standard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36BB3740E99A78B7934D59 /* Standard.swift */; };
-		4B2EBDC54B3BDE1E4D1A66CF /* iMessageTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 166A8FAE8834D7EDC6F8C223 /* iMessageTools.framework */; };
-		59599B787B80040F9B5D359E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1A1B9859FBDCA857B68E75A /* SystemConfiguration.framework */; };
-		5A32A4FAC13819954615BBB1 /* JWSwiftTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4E9CF9FC4E9E201932397 /* JWSwiftTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5BF64B4AB35C28EE2DFC5B25 /* CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5224C60EACAC153F155B12E /* CloudKit.swift */; };
-		5DB2D76A68FA30F12D07E14B /* Sequences.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3006185F0880367475726A2 /* Sequences.swift */; };
-		605DDA2EB98DFAD5BBBD130F /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 708C863B32DC48BB188104F1 /* FirebaseCore.framework */; };
-		623FF9CFE9FC2EBFAB07F9D3 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB81EA2D0CDE4CB5CB0AFC1D /* FirebaseAnalytics.framework */; };
-		6A2212453FC4733342D6DEA9 /* ModuleImports.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B8EE92AF976143426F8FE /* ModuleImports.swift */; };
-		6A589BF51DF7118AA74D4BF2 /* iMessageTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 166A8FAE8834D7EDC6F8C223 /* iMessageTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		73FAE312417D4D6B35E9295C /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11815D5662D2F19C6D767F /* CoreData.swift */; };
-		7D2179D21F6F35F10344869A /* AssociatedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703DC097CFAB038C75DAD349 /* AssociatedList.swift */; };
-		834A0F77C99A21A681EF5A2C /* MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F461947E4DBCE9B5BCE43A66 /* MapKit.swift */; };
-		86BAFEAB3FD3E73F87A38616 /* Representation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A31E64E6BC51164CA4FB38F /* Representation.swift */; };
-		89A4F43FCF57BAB6530D5B8B /* FirebaseAnalytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB81EA2D0CDE4CB5CB0AFC1D /* FirebaseAnalytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C5345AA729E5103CC1EBCD5 /* JWSwiftTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4E9CF9FC4E9E201932397 /* JWSwiftTools.framework */; };
-		8E6527006D64801B05418A6C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1AE0AC0886EC19BF238B2F /* StoreKit.framework */; };
-		904EAA4B1F4ABA700AA390DD /* Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753BC4DB1544475ED8BBE334 /* Process.swift */; };
-		91325A49EC3564E85948FA52 /* GoogleToolboxForMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3AB45BE65856238B9D66572 /* GoogleToolboxForMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		914C55AB4E33E0BDC7438E4A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69010C12D8D14361A4537C6F /* Session.swift */; };
-		931A33E4C89F18B7DFA78F1D /* ModuleImports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340AF3FC2477E1291520C0E7 /* ModuleImports.swift */; };
 		98FEEB1E7F2100179B53C7D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C65A8CDA2F69116EB178C9B /* GoogleService-Info.plist */; };
-		9D7AF3C93538F3B1BC242666 /* SortingAndFiltering.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92C3185EEE32760AF30E372 /* SortingAndFiltering.swift */; };
-		9F10A8EE3E8B540CECFE5A6D /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A7F859B8B5CA8B176244D /* Operators.swift */; };
-		A6CBDCBCB12AE870B3CA7076 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D189EEA3667FFF0D0D2F6F50 /* GoogleSymbolUtilities.framework */; };
-		A9ADC297B2F590CF45B1048F /* Miscellaneous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0AD0701B4DBD459C4C75AF /* Miscellaneous.swift */; };
-		AA9FD4888779C68EB9637DDB /* Interpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF01DA356E94B1E6F50BEE96 /* Interpreter.swift */; };
-		B019CAFCB18A02FA563AB705 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = C228B5FC270A907BB6CA38AE /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4FC57A13BE4FED54245CDFB /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD110309C5BD2E0C76DD393 /* UIKit.swift */; };
-		BA6D045E637A8AE9311A0325 /* RandomGenerators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08FB66B1FA8C88A08950A43 /* RandomGenerators.swift */; };
-		BC622591534A43C0F6CABA45 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED5034C0B70F5A6203BEB2 /* Layout.swift */; };
+		A7BF1FA89881B0A4F4E95B77 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D273B0F5E4424925DE90C7DA /* FirebaseAnalytics */; };
 		BF7753A6BE805D5747A3FFF1 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A679F368BE3C6C35D649811F /* MessagesViewController.swift */; };
-		C1476D718AA1CB58098A794C /* Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477D145D852F625C83069695 /* Collections.swift */; };
-		C1FCF9B8716864D3B42F0C5F /* JWSwiftTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4E9CF9FC4E9E201932397 /* JWSwiftTools.framework */; };
-		C7078085A41DD39E8FDF1F60 /* iMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF31E60D3A3B79938A259A1D /* iMessage.swift */; };
-		C83548853570588A0861B192 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B25EAC16FDA852D6EBE3427 /* GoogleInterchangeUtilities.framework */; };
-		CB7BDB5F9DDC18A88CAB193D /* FirebaseInstanceID.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 983B61764602B252851FD600 /* FirebaseInstanceID.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CFD35A9AC9397DFD7F96CB73 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB61F84198E0163AEDFA7E20 /* UI.swift */; };
 		D1092A7075638FE94822CE1E /* DesignsStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B1039DE01CE28F67C5149C /* DesignsStyleKit.swift */; };
-		D6D1B17906EED30DC7A0BB42 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440114F8C1D5CFDDD9A87402 /* AddressBook.framework */; };
 		DD3F6C9342CF8E7840068DD2 /* StretchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7F5194C1B91C17B72E748B /* StretchViewController.swift */; };
-		E47AC563135F68B10F1F9C09 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3AB45BE65856238B9D66572 /* GoogleToolboxForMac.framework */; };
-		E4E286674C8AEB4399CD1702 /* GoogleInterchangeUtilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B25EAC16FDA852D6EBE3427 /* GoogleInterchangeUtilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E937FBC0AF3F9461E3E6FA40 /* LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F4B5C16669DD05E6B9CA52 /* LifeCycle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7D9A5559A1A01A889A211642 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2B44B934F7F491D866526FED /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FEFBB00D9551177B88A7780B;
-			remoteInfo = iMessageTools;
-		};
-		B865883368EB82CAC35AA7CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2B44B934F7F491D866526FED /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DD4625393F5594AB7DF37E47;
-			remoteInfo = JWSwiftTools;
-		};
-		BF3BF14667405154C6DA155A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2B44B934F7F491D866526FED /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DD4625393F5594AB7DF37E47;
-			remoteInfo = JWSwiftTools;
-		};
 		C8485A91E5E73DFE4B04DD75 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2B44B934F7F491D866526FED /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 30A2E1C8239019B3F2E57D31;
 			remoteInfo = MessagesExtension;
-		};
-		E4E0470C80457CEEB85E887F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2B44B934F7F491D866526FED /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 800CE87C2CFA62226C448D75;
-			remoteInfo = GoogleToolboxForMac;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -117,77 +42,20 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D48C1DAC1974C0F6389AC568 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				91325A49EC3564E85948FA52 /* GoogleToolboxForMac.framework in Embed Frameworks */,
-				5A32A4FAC13819954615BBB1 /* JWSwiftTools.framework in Embed Frameworks */,
-				6A589BF51DF7118AA74D4BF2 /* iMessageTools.framework in Embed Frameworks */,
-				89A4F43FCF57BAB6530D5B8B /* FirebaseAnalytics.framework in Embed Frameworks */,
-				2F8CBB692190CBB40D3235AD /* FirebaseCore.framework in Embed Frameworks */,
-				CB7BDB5F9DDC18A88CAB193D /* FirebaseInstanceID.framework in Embed Frameworks */,
-				E4E286674C8AEB4399CD1702 /* GoogleInterchangeUtilities.framework in Embed Frameworks */,
-				087EBD08DE03E415D824DE85 /* GoogleSymbolUtilities.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		056DD1FD6DCD8902414B2974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		05B0117F328A3347AB9F44E2 /* MessagesExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = MessagesExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A31E64E6BC51164CA4FB38F /* Representation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Representation.swift; sourceTree = "<group>"; };
-		0B25EAC16FDA852D6EBE3427 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Pods/GoogleInterchangeUtilities/Frameworks/frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		166A8FAE8834D7EDC6F8C223 /* iMessageTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iMessageTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2002805ACD6F1B5BD5448296 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
-		340AF3FC2477E1291520C0E7 /* ModuleImports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleImports.swift; sourceTree = "<group>"; };
 		3C65A8CDA2F69116EB178C9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3D36BB3740E99A78B7934D59 /* Standard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Standard.swift; sourceTree = "<group>"; };
-		440114F8C1D5CFDDD9A87402 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AddressBook.framework; sourceTree = "<group>"; };
-		4503DBE1183612A0B0E0FB0B /* GTMNSData+zlib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GTMNSData+zlib.m"; sourceTree = "<group>"; };
-		473A7F859B8B5CA8B176244D /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
-		477D145D852F625C83069695 /* Collections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collections.swift; sourceTree = "<group>"; };
 		685A2F3F80C2D663DE2E0C06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		69010C12D8D14361A4537C6F /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		703DC097CFAB038C75DAD349 /* AssociatedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedList.swift; sourceTree = "<group>"; };
-		708C863B32DC48BB188104F1 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Pods/FirebaseCore/Frameworks/frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
-		753BC4DB1544475ED8BBE334 /* Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Process.swift; sourceTree = "<group>"; };
-		7A70808DD4FC2315CF65D223 /* Session-Structure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session-Structure.swift"; sourceTree = "<group>"; };
-		7D0AD0701B4DBD459C4C75AF /* Miscellaneous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Miscellaneous.swift; sourceTree = "<group>"; };
-		80F4B5C16669DD05E6B9CA52 /* LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycle.swift; sourceTree = "<group>"; };
-		83ED5034C0B70F5A6203BEB2 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
-		8F87A829E8E1DA0B1A8D1E12 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GTMNSData+zlib.h"; sourceTree = "<group>"; };
-		8FD110309C5BD2E0C76DD393 /* UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
-		983B61764602B252851FD600 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		A679F368BE3C6C35D649811F /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
-		A7B4E9CF9FC4E9E201932397 /* JWSwiftTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JWSwiftTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B08FB66B1FA8C88A08950A43 /* RandomGenerators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGenerators.swift; sourceTree = "<group>"; };
-		B1A1B9859FBDCA857B68E75A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SystemConfiguration.framework; sourceTree = "<group>"; };
-		B92C3185EEE32760AF30E372 /* SortingAndFiltering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingAndFiltering.swift; sourceTree = "<group>"; };
 		BE37AA90E6D0895075915035 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Messages.framework; sourceTree = "<group>"; };
-		C228B5FC270A907BB6CA38AE /* GTMDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
-		C3AB45BE65856238B9D66572 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7F5194C1B91C17B72E748B /* StretchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchViewController.swift; sourceTree = "<group>"; };
-		CB61F84198E0163AEDFA7E20 /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
-		CD11815D5662D2F19C6D767F /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
-		CE1AE0AC0886EC19BF238B2F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StoreKit.framework; sourceTree = "<group>"; };
-		CE6B8EE92AF976143426F8FE /* ModuleImports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleImports.swift; sourceTree = "<group>"; };
-		CF31E60D3A3B79938A259A1D /* iMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessage.swift; sourceTree = "<group>"; };
 		CF8E8DE009EEC1443835F3CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		D189EEA3667FFF0D0D2F6F50 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Pods/GoogleSymbolUtilities/Frameworks/frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		DF01DA356E94B1E6F50BEE96 /* Interpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interpreter.swift; sourceTree = "<group>"; };
 		E0B1039DE01CE28F67C5149C /* DesignsStyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignsStyleKit.swift; sourceTree = "<group>"; };
 		E1A1A4185A0A6F3EE732CAE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		E3006185F0880367475726A2 /* Sequences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequences.swift; sourceTree = "<group>"; };
-		E5224C60EACAC153F155B12E /* CloudKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKit.swift; sourceTree = "<group>"; };
-		EB81EA2D0CDE4CB5CB0AFC1D /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		ED0BF10E8280ECC3D7DFD1EC /* StretchStyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchStyleKit.swift; sourceTree = "<group>"; };
-		EFF49A8ED266D1276DB31449 /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
-		F461947E4DBCE9B5BCE43A66 /* MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKit.swift; sourceTree = "<group>"; };
 		FE8907A53902F36BF01245D3 /* Stretcher.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Stretcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3F61874F857040BA4E3690 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,95 +65,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E47AC563135F68B10F1F9C09 /* GoogleToolboxForMac.framework in Frameworks */,
-				8C5345AA729E5103CC1EBCD5 /* JWSwiftTools.framework in Frameworks */,
-				4B2EBDC54B3BDE1E4D1A66CF /* iMessageTools.framework in Frameworks */,
-				623FF9CFE9FC2EBFAB07F9D3 /* FirebaseAnalytics.framework in Frameworks */,
-				605DDA2EB98DFAD5BBBD130F /* FirebaseCore.framework in Frameworks */,
-				1558AC465BC822574B125F7E /* FirebaseInstanceID.framework in Frameworks */,
-				C83548853570588A0861B192 /* GoogleInterchangeUtilities.framework in Frameworks */,
-				A6CBDCBCB12AE870B3CA7076 /* GoogleSymbolUtilities.framework in Frameworks */,
+				A7BF1FA89881B0A4F4E95B77 /* FirebaseAnalytics in Frameworks */,
 				008204F584469A6EFFBCE5AA /* Messages.framework in Frameworks */,
-				8E6527006D64801B05418A6C /* StoreKit.framework in Frameworks */,
-				59599B787B80040F9B5D359E /* SystemConfiguration.framework in Frameworks */,
-				D6D1B17906EED30DC7A0BB42 /* AddressBook.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		907AD10C0922C36C124DA5A4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C1FCF9B8716864D3B42F0C5F /* JWSwiftTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3120BF997048E7DF9A2C8E91 /* JWSwiftTools */ = {
-			isa = PBXGroup;
-			children = (
-				504FE1160BF96424859FB101 /* SwiftTools */,
-			);
-			path = JWSwiftTools;
-			sourceTree = "<group>";
-		};
-		401CA70E82C1410E4C9CC768 /* iMessageTools */ = {
-			isa = PBXGroup;
-			children = (
-				F39E884E973270FB47682466 /* iMessagePack */,
-			);
-			path = iMessageTools;
-			sourceTree = "<group>";
-		};
-		504FE1160BF96424859FB101 /* SwiftTools */ = {
-			isa = PBXGroup;
-			children = (
-				703DC097CFAB038C75DAD349 /* AssociatedList.swift */,
-				477D145D852F625C83069695 /* Collections.swift */,
-				83ED5034C0B70F5A6203BEB2 /* Layout.swift */,
-				80F4B5C16669DD05E6B9CA52 /* LifeCycle.swift */,
-				EFF49A8ED266D1276DB31449 /* LocationHandler.swift */,
-				F461947E4DBCE9B5BCE43A66 /* MapKit.swift */,
-				2002805ACD6F1B5BD5448296 /* Messages.swift */,
-				CE6B8EE92AF976143426F8FE /* ModuleImports.swift */,
-				473A7F859B8B5CA8B176244D /* Operators.swift */,
-				753BC4DB1544475ED8BBE334 /* Process.swift */,
-				B08FB66B1FA8C88A08950A43 /* RandomGenerators.swift */,
-				0A31E64E6BC51164CA4FB38F /* Representation.swift */,
-				E3006185F0880367475726A2 /* Sequences.swift */,
-				7A70808DD4FC2315CF65D223 /* Session-Structure.swift */,
-				69010C12D8D14361A4537C6F /* Session.swift */,
-				B92C3185EEE32760AF30E372 /* SortingAndFiltering.swift */,
-				3D36BB3740E99A78B7934D59 /* Standard.swift */,
-				CB61F84198E0163AEDFA7E20 /* UI.swift */,
-				8FD110309C5BD2E0C76DD393 /* UIKit.swift */,
-				88E169B4619BEC42F30CD6BC /* Extensions */,
-			);
-			path = SwiftTools;
-			sourceTree = "<group>";
-		};
 		85F594C24E3FE8A95F176DD4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3AB45BE65856238B9D66572 /* GoogleToolboxForMac.framework */,
-				166A8FAE8834D7EDC6F8C223 /* iMessageTools.framework */,
-				A7B4E9CF9FC4E9E201932397 /* JWSwiftTools.framework */,
 				05B0117F328A3347AB9F44E2 /* MessagesExtension.appex */,
 				FE8907A53902F36BF01245D3 /* Stretcher.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		88E169B4619BEC42F30CD6BC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E5224C60EACAC153F155B12E /* CloudKit.swift */,
-				CD11815D5662D2F19C6D767F /* CoreData.swift */,
-				7D0AD0701B4DBD459C4C75AF /* Miscellaneous.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9BEF00D0EC1E94A384A80D43 /* MessagesExtension */ = {
@@ -303,46 +97,10 @@
 			path = MessagesExtension;
 			sourceTree = "<group>";
 		};
-		A649E0FD34C63F0BEC1BB4E7 /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				8F87A829E8E1DA0B1A8D1E12 /* GTMNSData+zlib.h */,
-				4503DBE1183612A0B0E0FB0B /* GTMNSData+zlib.m */,
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
-		A73CAA6623A3BF0C2724D830 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B492175A6BBE18D436B53732 /* GoogleToolboxForMac */,
-				401CA70E82C1410E4C9CC768 /* iMessageTools */,
-				3120BF997048E7DF9A2C8E91 /* JWSwiftTools */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		B492175A6BBE18D436B53732 /* GoogleToolboxForMac */ = {
-			isa = PBXGroup;
-			children = (
-				C228B5FC270A907BB6CA38AE /* GTMDefines.h */,
-				A649E0FD34C63F0BEC1BB4E7 /* Foundation */,
-			);
-			path = GoogleToolboxForMac;
-			sourceTree = "<group>";
-		};
 		DB8FCC73AF30E7EEB28FA7DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				440114F8C1D5CFDDD9A87402 /* AddressBook.framework */,
-				EB81EA2D0CDE4CB5CB0AFC1D /* FirebaseAnalytics.framework */,
-				708C863B32DC48BB188104F1 /* FirebaseCore.framework */,
-				983B61764602B252851FD600 /* FirebaseInstanceID.framework */,
-				0B25EAC16FDA852D6EBE3427 /* GoogleInterchangeUtilities.framework */,
-				D189EEA3667FFF0D0D2F6F50 /* GoogleSymbolUtilities.framework */,
 				BE37AA90E6D0895075915035 /* Messages.framework */,
-				CE1AE0AC0886EC19BF238B2F /* StoreKit.framework */,
-				B1A1B9859FBDCA857B68E75A /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -356,21 +114,10 @@
 			path = Stretcher;
 			sourceTree = "<group>";
 		};
-		F39E884E973270FB47682466 /* iMessagePack */ = {
-			isa = PBXGroup;
-			children = (
-				CF31E60D3A3B79938A259A1D /* iMessage.swift */,
-				DF01DA356E94B1E6F50BEE96 /* Interpreter.swift */,
-				340AF3FC2477E1291520C0E7 /* ModuleImports.swift */,
-			);
-			path = iMessagePack;
-			sourceTree = "<group>";
-		};
 		FE9D3672D64DA85180FD38D1 = {
 			isa = PBXGroup;
 			children = (
 				9BEF00D0EC1E94A384A80D43 /* MessagesExtension */,
-				A73CAA6623A3BF0C2724D830 /* Pods */,
 				E224FCF08700C7919F647144 /* Stretcher */,
 				DB8FCC73AF30E7EEB28FA7DE /* Frameworks */,
 				85F594C24E3FE8A95F176DD4 /* Products */,
@@ -378,18 +125,6 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		724D51F99AAF661E4CD5F8A5 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B019CAFCB18A02FA563AB705 /* GTMDefines.h in Headers */,
-				2A06C5C0BA5E0E24BCD41324 /* GTMNSData+zlib.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		30A2E1C8239019B3F2E57D31 /* MessagesExtension */ = {
@@ -399,39 +134,18 @@
 				7DD9E467F9B17AC462E0543A /* Sources */,
 				E6B260A159388B1BAD71F032 /* Resources */,
 				00CFF229D2DC133F4E6626B7 /* Frameworks */,
-				D48C1DAC1974C0F6389AC568 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				11F63150798FD50A43DF9DA7 /* PBXTargetDependency */,
-				48CDD6C5C238E1056AFED223 /* PBXTargetDependency */,
-				F288F90CBAAA60509E337AF1 /* PBXTargetDependency */,
 			);
 			name = MessagesExtension;
 			packageProductDependencies = (
+				D273B0F5E4424925DE90C7DA /* FirebaseAnalytics */,
 			);
 			productName = MessagesExtension;
 			productReference = 05B0117F328A3347AB9F44E2 /* MessagesExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
-		};
-		800CE87C2CFA62226C448D75 /* GoogleToolboxForMac */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7C2815C889574148DC55F3A3 /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */;
-			buildPhases = (
-				724D51F99AAF661E4CD5F8A5 /* Headers */,
-				AB6508C135EFF7EEC9E9A345 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = GoogleToolboxForMac;
-			packageProductDependencies = (
-			);
-			productName = GoogleToolboxForMac;
-			productReference = C3AB45BE65856238B9D66572 /* GoogleToolboxForMac.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 		C8A124C9AB07858B23CCF794 /* Stretcher */ = {
 			isa = PBXNativeTarget;
@@ -453,42 +167,6 @@
 			productReference = FE8907A53902F36BF01245D3 /* Stretcher.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DD4625393F5594AB7DF37E47 /* JWSwiftTools */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 76FBC015B011342D1DA0E3F9 /* Build configuration list for PBXNativeTarget "JWSwiftTools" */;
-			buildPhases = (
-				B9EDE92984D7B98F57094AB1 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = JWSwiftTools;
-			packageProductDependencies = (
-			);
-			productName = JWSwiftTools;
-			productReference = A7B4E9CF9FC4E9E201932397 /* JWSwiftTools.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		FEFBB00D9551177B88A7780B /* iMessageTools */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 900296911E65F9183B7E2F88 /* Build configuration list for PBXNativeTarget "iMessageTools" */;
-			buildPhases = (
-				B41ADDEA21BE966ADABF2086 /* Sources */,
-				907AD10C0922C36C124DA5A4 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7594B2B2579B3B0950C51A74 /* PBXTargetDependency */,
-			);
-			name = iMessageTools;
-			packageProductDependencies = (
-			);
-			productName = iMessageTools;
-			productReference = 166A8FAE8834D7EDC6F8C223 /* iMessageTools.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -501,16 +179,7 @@
 					30A2E1C8239019B3F2E57D31 = {
 						DevelopmentTeam = 349WFX4WJR;
 					};
-					800CE87C2CFA62226C448D75 = {
-						DevelopmentTeam = 349WFX4WJR;
-					};
 					C8A124C9AB07858B23CCF794 = {
-						DevelopmentTeam = 349WFX4WJR;
-					};
-					DD4625393F5594AB7DF37E47 = {
-						DevelopmentTeam = 349WFX4WJR;
-					};
-					FEFBB00D9551177B88A7780B = {
 						DevelopmentTeam = 349WFX4WJR;
 					};
 				};
@@ -525,15 +194,15 @@
 			);
 			mainGroup = FE9D3672D64DA85180FD38D1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1E1F4F2E927002917B5E8B00 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				800CE87C2CFA62226C448D75 /* GoogleToolboxForMac */,
-				DD4625393F5594AB7DF37E47 /* JWSwiftTools */,
 				30A2E1C8239019B3F2E57D31 /* MessagesExtension */,
 				C8A124C9AB07858B23CCF794 /* Stretcher */,
-				FEFBB00D9551177B88A7780B /* iMessageTools */,
 			);
 		};
 /* End PBXProject section */
@@ -578,80 +247,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB6508C135EFF7EEC9E9A345 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3878E67DD10581D768B8BA34 /* GTMNSData+zlib.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B41ADDEA21BE966ADABF2086 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AA9FD4888779C68EB9637DDB /* Interpreter.swift in Sources */,
-				931A33E4C89F18B7DFA78F1D /* ModuleImports.swift in Sources */,
-				C7078085A41DD39E8FDF1F60 /* iMessage.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B9EDE92984D7B98F57094AB1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7D2179D21F6F35F10344869A /* AssociatedList.swift in Sources */,
-				5BF64B4AB35C28EE2DFC5B25 /* CloudKit.swift in Sources */,
-				C1476D718AA1CB58098A794C /* Collections.swift in Sources */,
-				73FAE312417D4D6B35E9295C /* CoreData.swift in Sources */,
-				BC622591534A43C0F6CABA45 /* Layout.swift in Sources */,
-				E937FBC0AF3F9461E3E6FA40 /* LifeCycle.swift in Sources */,
-				1CCCDDD9EFE3ADCE581EC6CC /* LocationHandler.swift in Sources */,
-				834A0F77C99A21A681EF5A2C /* MapKit.swift in Sources */,
-				215C015AFEA3113D741537A0 /* Messages.swift in Sources */,
-				A9ADC297B2F590CF45B1048F /* Miscellaneous.swift in Sources */,
-				6A2212453FC4733342D6DEA9 /* ModuleImports.swift in Sources */,
-				9F10A8EE3E8B540CECFE5A6D /* Operators.swift in Sources */,
-				904EAA4B1F4ABA700AA390DD /* Process.swift in Sources */,
-				BA6D045E637A8AE9311A0325 /* RandomGenerators.swift in Sources */,
-				86BAFEAB3FD3E73F87A38616 /* Representation.swift in Sources */,
-				5DB2D76A68FA30F12D07E14B /* Sequences.swift in Sources */,
-				33DE0767317D3994BD1EECFB /* Session-Structure.swift in Sources */,
-				914C55AB4E33E0BDC7438E4A /* Session.swift in Sources */,
-				9D7AF3C93538F3B1BC242666 /* SortingAndFiltering.swift in Sources */,
-				4538DACBA790A531DFD63BF5 /* Standard.swift in Sources */,
-				CFD35A9AC9397DFD7F96CB73 /* UI.swift in Sources */,
-				B4FC57A13BE4FED54245CDFB /* UIKit.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		11F63150798FD50A43DF9DA7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 800CE87C2CFA62226C448D75 /* GoogleToolboxForMac */;
-			targetProxy = E4E0470C80457CEEB85E887F /* PBXContainerItemProxy */;
-		};
 		2CDFB44755B8C79D00AE4839 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 30A2E1C8239019B3F2E57D31 /* MessagesExtension */;
 			targetProxy = C8485A91E5E73DFE4B04DD75 /* PBXContainerItemProxy */;
-		};
-		48CDD6C5C238E1056AFED223 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DD4625393F5594AB7DF37E47 /* JWSwiftTools */;
-			targetProxy = BF3BF14667405154C6DA155A /* PBXContainerItemProxy */;
-		};
-		7594B2B2579B3B0950C51A74 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DD4625393F5594AB7DF37E47 /* JWSwiftTools */;
-			targetProxy = B865883368EB82CAC35AA7CB /* PBXContainerItemProxy */;
-		};
-		F288F90CBAAA60509E337AF1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FEFBB00D9551177B88A7780B /* iMessageTools */;
-			targetProxy = 7D9A5559A1A01A889A211642 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -673,11 +275,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\".\"",
-					"\"Pods/FirebaseAnalytics/Frameworks/frameworks\"",
-					"\"Pods/FirebaseCore/Frameworks/frameworks\"",
-					"\"Pods/FirebaseInstanceID/Frameworks/frameworks\"",
-					"\"Pods/GoogleInterchangeUtilities/Frameworks/frameworks\"",
-					"\"Pods/GoogleSymbolUtilities/Frameworks/frameworks\"",
 				);
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -686,34 +283,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				OTHER_LDFLAGS = "$(inherited) -ObjC -lc++ -lsqlite3 -lz";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwitapps.StretchMe.MessagesExtension;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		0EFE0EFD900CFAC1076CDF80 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Pods/iMessageTools/iMessagePack/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_MODULE_NAME = iMessageTools;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -790,11 +362,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\".\"",
-					"\"Pods/FirebaseAnalytics/Frameworks/frameworks\"",
-					"\"Pods/FirebaseCore/Frameworks/frameworks\"",
-					"\"Pods/FirebaseInstanceID/Frameworks/frameworks\"",
-					"\"Pods/GoogleInterchangeUtilities/Frameworks/frameworks\"",
-					"\"Pods/GoogleSymbolUtilities/Frameworks/frameworks\"",
 				);
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -803,58 +370,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				OTHER_LDFLAGS = "$(inherited) -ObjC -lc++ -lsqlite3 -lz";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwitapps.StretchMe.MessagesExtension;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		34A8612981F3141ABB5460BE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Pods/iMessageTools/iMessagePack/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_MODULE_NAME = iMessageTools;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug;
-		};
-		46DAF10EB23194ABE660E34D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Pods/JWSwiftTools/SwiftTools/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_MODULE_NAME = JWSwiftTools;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -918,55 +436,6 @@
 			};
 			name = Release;
 		};
-		7EE33C619B5A86294E9EF173 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Pods/JWSwiftTools/SwiftTools/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_MODULE_NAME = JWSwiftTools;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Release;
-		};
-		82680F3ACD4CD541B2FC3191 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				OTHER_CFLAGS = "$(inherited) -DOS_OBJECT_USE_OBJC=0";
-				PRODUCT_MODULE_NAME = GoogleToolboxForMac;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug;
-		};
 		9ACBD768A63D2577088C687D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -981,31 +450,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwitapps.StretchMe;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		B0218B0ED21E43BC239A96ED /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				OTHER_CFLAGS = "$(inherited) -DOS_OBJECT_USE_OBJC=0";
-				PRODUCT_MODULE_NAME = GoogleToolboxForMac;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -1029,38 +473,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		76FBC015B011342D1DA0E3F9 /* Build configuration list for PBXNativeTarget "JWSwiftTools" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				46DAF10EB23194ABE660E34D /* Debug */,
-				7EE33C619B5A86294E9EF173 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		7C2815C889574148DC55F3A3 /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				82680F3ACD4CD541B2FC3191 /* Debug */,
-				B0218B0ED21E43BC239A96ED /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
 		877EAD3798C579660693F87F /* Build configuration list for PBXNativeTarget "MessagesExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CE1D1A1536E02768054922E /* Debug */,
 				0D5E2FBF21A1E87C3DBA5CCF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		900296911E65F9183B7E2F88 /* Build configuration list for PBXNativeTarget "iMessageTools" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				34A8612981F3141ABB5460BE /* Debug */,
-				0EFE0EFD900CFAC1076CDF80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -1084,6 +501,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1E1F4F2E927002917B5E8B00 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.29.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D273B0F5E4424925DE90C7DA /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E1F4F2E927002917B5E8B00 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2B44B934F7F491D866526FED /* Project object */;
 }

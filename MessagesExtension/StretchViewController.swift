@@ -8,14 +8,11 @@
 
 import UIKit
 
-import iMessageTools
-
 import FirebaseAnalytics
 
 class StretchViewController: UIViewController, UITextFieldDelegate {
 
     var messageSender: MessagesViewController!
-    var orientationManager: OrientationManager!
     
     @IBOutlet weak var textField: UITextField!
     
@@ -68,17 +65,17 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
                 }
                 
                 DispatchQueue.main.sync {
-                    self.orientationManager.requestPresentationStyle(.compact)
+                    self.messageSender.requestPresentationStyle(.compact)
                     self.messageSender.dismissStretchController()
                 }
             }
             
         } catch { }
         
-        let params = [
-            kFIRParameterValue: text.count as NSObject
+        let params: [String: Any] = [
+            AnalyticsParameterValue: text.count
         ]
-        FIRAnalytics.logEvent(withName: "InsertPressed", parameters: params)
+        Analytics.logEvent("InsertPressed", parameters: params)
     }
     
     func renderImage(from view: UIView) -> UIImage? {
