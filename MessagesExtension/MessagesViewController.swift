@@ -129,8 +129,8 @@ class MessagesViewController: MSMessagesAppViewController, FirebaseConfigurable 
 }
 
 
-public protocol FirebaseConfigurable: class {
-    var servicesFileName: String { get }
+public protocol FirebaseConfigurable: AnyObject {
+    var servicesFileName: String? { get }
     
     func configureFirebase()
 }
@@ -140,14 +140,25 @@ public extension FirebaseConfigurable {
         return Bundle(for: type(of: self) as AnyClass)
     }
     
-    internal var servicesFileName: String {
-        return bundle.infoDictionary!["Google Services File"] as! String
+    internal var servicesFileName: String? {
+        if let value = bundle.infoDictionary?["Google Services File"] as? String, !value.isEmpty {
+            return value
+        }
+        if bundle.path(forResource: "GoogleService-Info", ofType: "plist") != nil {
+            return "GoogleService-Info"
+        }
+        if bundle.path(forResource: "GoogleService", ofType: "plist") != nil {
+            return "GoogleService"
+        }
+        return nil
     }
     
     public func configureFirebase() {
         guard FirebaseApp.app() == nil else { return }
-        guard let optionsPath = bundle.path(forResource: servicesFileName, ofType: "plist"),
+        guard let servicesFileName,
+              let optionsPath = bundle.path(forResource: servicesFileName, ofType: "plist"),
               let options = FirebaseOptions(contentsOfFile: optionsPath) else {
+            assertionFailure("Missing Firebase config plist in MessagesExtension bundle")
             return
         }
         

@@ -26,6 +26,11 @@ targets:
       properties:
         CFBundleShortVersionString: "1.1"
         CFBundleVersion: "1.1"
+        CFBundleDisplayName: Textend
+        NSExtension:
+          NSExtensionAttributes: {}
+          NSExtensionMainStoryboard: MainInterface
+          NSExtensionPointIdentifier: com.apple.message-payload-provider
     sources:
       - path: MessagesExtension
     dependencies:
