@@ -51,13 +51,13 @@ public extension MessageSender where Self: MSMessagesAppViewController {
 @available(iOSApplicationExtension 10.0, *)
 public extension UIViewController {
     public func present(_ controller: UIViewController) {
-        childViewControllers.forEach {
-            $0.willMove(toParentViewController: nil)
+        children.forEach {
+            $0.willMove(toParent: nil)
             $0.view.removeFromSuperview()
-            $0.removeFromParentViewController()
+            $0.removeFromParent()
         }
     
-        addChildViewController(controller)
+        addChild(controller)
         
         controller.view.frame = view.bounds
         controller.view.translatesAutoresizingMaskIntoConstraints = false
@@ -69,11 +69,11 @@ public extension UIViewController {
         controller.view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
         controller.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
         
-        controller.didMove(toParentViewController: self)
+        controller.didMove(toParent: self)
     }
     
     public func throwAway<T: UIViewController>(controller: T) {
         (controller.view.superview != nil) | controller.view.removeFromSuperview
-        (controller.parent != nil) | removeFromParentViewController
+        (controller.parent != nil) | { controller.removeFromParent() }
     }
 }

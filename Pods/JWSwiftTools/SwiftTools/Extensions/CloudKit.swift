@@ -19,34 +19,34 @@ public extension CKRecord {
         return value(forKey: name) as? T ?? defaultValue
     }
 
-    func referenceForName(_ name: String) -> CKReference? {
-        return self[name] as? CKReference
+    func referenceForName(_ name: String) -> CKRecord.Reference? {
+        return self[name] as? CKRecord.Reference
     }
 
-    func referencesForName(_ name: String) -> Set<CKReference> {
-        return (self[name] as? [CKReference] ?? []).set
+    func referencesForName(_ name: String) -> Set<CKRecord.Reference> {
+        return (self[name] as? [CKRecord.Reference] ?? []).set
     }
 }
 
 public extension Collection where Iterator.Element: CKRecord {
-    var recordIDs: [CKRecordID] { return map { $0.recordID } }
+    var recordIDs: [CKRecord.ID] { return map { $0.recordID } }
 }
 
-public extension Collection where Iterator.Element: CKRecordID {
+public extension Collection where Iterator.Element: CKRecord.ID {
     var recordNames: [String] {
         return map { $0.recordName }
     }
-    var references: [CKReference] {
-        return map { CKReference(recordID: $0, action: .none) }
+    var references: [CKRecord.Reference] {
+        return map { CKRecord.Reference(recordID: $0, action: .none) }
     }
 }
 
-public extension Collection where Iterator.Element: CKReference {
-    var recordIDs: [CKRecordID] { return map { $0.recordID } }
+public extension Collection where Iterator.Element: CKRecord.Reference {
+    var recordIDs: [CKRecord.ID] { return map { $0.recordID } }
 }
 
 public extension Collection where Iterator.Element: CKNotification {
-    var IDs: [CKNotificationID] {
+    var IDs: [CKNotification.ID] {
         return filter { $0.notificationID != nil }.map { $0.notificationID! }
     }
 }

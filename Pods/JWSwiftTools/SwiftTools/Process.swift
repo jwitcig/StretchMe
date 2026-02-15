@@ -49,12 +49,12 @@ public extension ProcessItem {
 
 public extension Sequence where Iterator.Element == ProcessItem {
     var sortedByIndex: [ProcessItem] {
-        return self.sorted { $0.0.index < $0.1.index }
+        return self.sorted { $0.index < $1.index }
     }
 }
 
 open class Process {
-    open let items: [ProcessItem]
+    public let items: [ProcessItem]
     
     open var current: ProcessItem {
         didSet {

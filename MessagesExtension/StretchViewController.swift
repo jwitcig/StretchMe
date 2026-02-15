@@ -34,8 +34,8 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
         textField.addTarget(self, action: #selector(StretchViewController.textChanged(textField:)), for: .editingChanged)
     }
     
-    func textChanged(textField: UITextField) {
-        stretchButton.isEnabled = text.characters.count > 0
+    @objc func textChanged(textField: UITextField) {
+        stretchButton.isEnabled = text.count > 0
         
         text = text.uppercased()
     }
@@ -56,7 +56,7 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
             let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
             let fileURL = documentsURL.appendingPathComponent("image.png")
            
-            if let data = UIImagePNGRepresentation(image) {
+            if let data = image.pngData() {
                 try data.write(to: fileURL, options: .atomic)
             }
         
@@ -76,7 +76,7 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
         } catch { }
         
         let params = [
-            kFIRParameterValue: text.characters.count as NSObject
+            kFIRParameterValue: text.count as NSObject
         ]
         FIRAnalytics.logEvent(withName: "InsertPressed", parameters: params)
     }
@@ -91,7 +91,7 @@ class StretchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        return (text as NSString).replacingCharacters(in: range, with: string).characters.count < 30
+        return (text as NSString).replacingCharacters(in: range, with: string).count < 30
     }
 }
 

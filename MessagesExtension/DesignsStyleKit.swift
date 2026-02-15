@@ -151,7 +151,7 @@ public class DesignsStyleKit : NSObject {
         let textRect = CGRect(x: 12, y: 12, width: 148, height: 42)
         let textStyle = NSMutableParagraphStyle()
         textStyle.alignment = .center
-        let textFontAttributes = [NSFontAttributeName: UIFont(name: "SignPainter-HouseScript", size: 30)!, NSForegroundColorAttributeName: UIColor.darkGray, NSParagraphStyleAttributeName: textStyle]
+        let textFontAttributes = [NSAttributedString.Key.font: UIFont(name: "SignPainter-HouseScript", size: 30)!, NSAttributedString.Key.foregroundColor: UIColor.darkGray, NSAttributedString.Key.paragraphStyle: textStyle]
 
         let textTextHeight: CGFloat = buttonText.boundingRect(with: CGSize(width: textRect.width, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: textFontAttributes, context: nil).height
         context.saveGState()
