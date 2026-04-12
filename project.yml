@@ -4,54 +4,24 @@ options:
 configs:
   Debug: debug
   Release: release
-packages:
-  Firebase:
-    url: https://github.com/firebase/firebase-ios-sdk.git
-    exactVersion: 10.29.0
 settings:
   base:
-    SWIFT_VERSION: 5.0
-    IPHONEOS_DEPLOYMENT_TARGET: 12.0
-    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": arm64
+    SWIFT_VERSION: 6.0
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
     DEVELOPMENT_TEAM: 349WFX4WJR
-    CURRENT_PROJECT_VERSION: 1.1
-    MARKETING_VERSION: 1.1
+    CURRENT_PROJECT_VERSION: 12
+    MARKETING_VERSION: 1.2
+    TARGETED_DEVICE_FAMILY: "1,2"
 targets:
-  MessagesExtension:
-    type: app-extension.messages
-    platform: iOS
-    deploymentTarget: "12.0"
-    info:
-      path: MessagesExtension/Info.plist
-      properties:
-        CFBundleShortVersionString: "1.1"
-        CFBundleVersion: "1.1"
-        CFBundleDisplayName: Textend
-        MSMessagesExtensionStoreIconName: Messages Icon
-        NSExtension:
-          NSExtensionAttributes: {}
-          NSExtensionMainStoryboard: MainInterface
-          NSExtensionPointIdentifier: com.apple.message-payload-provider
-    sources:
-      - path: MessagesExtension
-    dependencies:
-      - package: Firebase
-        product: FirebaseAnalytics
-      - framework: Messages.framework
-    settings:
-      base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.jwitapps.textend.MessagesExtension
-        ASSETCATALOG_COMPILER_APPICON_NAME: Messages Icon
-
   Textend:
     type: application.messages
     platform: iOS
-    deploymentTarget: "12.0"
+    deploymentTarget: "16.0"
     info:
       path: Textend/Info.plist
       properties:
-        CFBundleShortVersionString: "1.1"
-        CFBundleVersion: "1.1"
+        CFBundleShortVersionString: "$(MARKETING_VERSION)"
+        CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
     sources:
       - path: Textend
         excludes:
@@ -62,6 +32,53 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.jwitapps.textend
+
+  MessagesExtension:
+    type: app-extension.messages
+    platform: iOS
+    deploymentTarget: "16.0"
+    info:
+      path: MessagesExtension/Info.plist
+      properties:
+        CFBundleShortVersionString: "$(MARKETING_VERSION)"
+        CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
+        CFBundleDisplayName: Textend
+        MSMessagesExtensionStoreIconName: Messages Icon
+        NSExtension:
+          NSExtensionAttributes: {}
+          NSExtensionPointIdentifier: com.apple.message-payload-provider
+          NSExtensionPrincipalClass: "$(PRODUCT_MODULE_NAME).MessagesViewController"
+    sources:
+      - path: MessagesExtension
+      - path: Sources/TextendCore
+      - path: Sources/TextendUI
+      - path: Sources/TextendRendering
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jwitapps.textend.MessagesExtension
+        ASSETCATALOG_COMPILER_APPICON_NAME: Messages Icon
+
+  TextendHarness:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    info:
+      path: Harness/Info.plist
+      properties:
+        CFBundleShortVersionString: "$(MARKETING_VERSION)"
+        CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
+        UILaunchScreen:
+          UIColorName: ""
+    sources:
+      - path: Harness
+      - path: Sources/TextendCore
+      - path: Sources/TextendUI
+      - path: Sources/TextendRendering
+      - path: Textend/Assets.xcassets
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jwitapps.textend.harness
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
 
 schemes:
   Textend:
@@ -75,13 +92,18 @@ schemes:
   TextendMessages:
     build:
       targets:
-        MessagesExtension: all
         Textend: all
+        MessagesExtension: all
     run:
       config: Debug
-      executable: MessagesExtension
-    profile:
-      config: Release
       executable: Textend
+    archive:
+      config: Release
+  TextendHarness:
+    build:
+      targets:
+        TextendHarness: all
+    run:
+      config: Debug
     archive:
       config: Release

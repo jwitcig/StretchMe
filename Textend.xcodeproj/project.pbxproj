@@ -7,17 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		603A0AE996AC26D587E405F8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CA6C3222F5208FBBED016BE0 /* FirebaseAnalytics */; };
+		0A44F2453AFAC8DAE89275B0 /* TextendHarnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156F24A37C5D4D72EC58A4D /* TextendHarnessApp.swift */; };
+		1ABFC8B9B4E194C769EC809C /* TextendPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E3E802E284EE25B2441A11 /* TextendPalette.swift */; };
+		1F3BE410F0E33F61AD3D40A3 /* TextendRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C206ABFA466FA4F49EE804B6 /* TextendRenderer.swift */; };
+		50D7440EA60BDFCBEF23D25E /* TextendStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F711E588261924A8E6310 /* TextendStyle.swift */; };
+		52C15094D7609D8CBD4B711F /* TextendComposerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654566555101A3B23D2DF56B /* TextendComposerViewModel.swift */; };
+		530E6A8D009FC5B26FB142B8 /* TextendComposerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C59EA82185E0B54E302F8F1 /* TextendComposerScreen.swift */; };
+		651E964D59D3DF1B0F1D1504 /* TextendSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A9C206C2FCACF846ED538 /* TextendSnapshot.swift */; };
+		7075416850B73AC40597654E /* TextendComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6657ED16BAB36CC210152251 /* TextendComposer.swift */; };
 		759E5522FBB947ED4A5D5ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D9BA221055E752641659CE5 /* Assets.xcassets */; };
+		7CB42FD2BCCC0EBF595BDC48 /* TextendPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E3E802E284EE25B2441A11 /* TextendPalette.swift */; };
+		7DB001391D9308D888FD4239 /* TextendComposerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654566555101A3B23D2DF56B /* TextendComposerViewModel.swift */; };
 		7EFF5F1F35634FDF9F26FFB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51D6A61BD2E9BD297541287E /* GoogleService-Info.plist */; };
+		821C8F00987B06A8F702815B /* TextendComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6657ED16BAB36CC210152251 /* TextendComposer.swift */; };
 		A72F6EB561D7C5458D0A7D90 /* MessagesExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1F98184307A9B5E5A70889F4 /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		A8EF7150126E9319ED8B5859 /* TextendStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EAA47523939B897C494A62 /* TextendStyleKit.swift */; };
-		AA662428E81E732F1AC3AB26 /* TextendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6751BE146045C6C827936A /* TextendViewController.swift */; };
-		D9CF0CA70A016467D4A8AB04 /* DesignsStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC60664401700DD74F9B72 /* DesignsStyleKit.swift */; };
-		DB3D5AB678F4B74643DB3410 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B51C06FB680F153D9DC98143 /* Messages.framework */; };
+		ADB760F92F80B2C194A1D28D /* TextendRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C206ABFA466FA4F49EE804B6 /* TextendRenderer.swift */; };
+		B872059BB6310EABEEE957E4 /* TextendStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F711E588261924A8E6310 /* TextendStyle.swift */; };
+		CE0C5710B96A83D3EF4FDFB3 /* TextendSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A9C206C2FCACF846ED538 /* TextendSnapshot.swift */; };
+		D6EDE486D418C0FDE5C1A040 /* TextendComposerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C59EA82185E0B54E302F8F1 /* TextendComposerScreen.swift */; };
+		E02845551C8517E1AF14E96F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D39EA0E38B2195751494A5 /* Assets.xcassets */; };
 		E4FF0B163754FA8302ADB4CD /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5C274FDDCCF581AFE7453 /* MessagesViewController.swift */; };
 		E6979382A7AC64E870DF7A3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D39EA0E38B2195751494A5 /* Assets.xcassets */; };
-		F385205F536B7C7F24ABFBC0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 749821BB14C70CC14A8BFE21 /* MainInterface.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,38 +57,42 @@
 /* Begin PBXFileReference section */
 		1F98184307A9B5E5A70889F4 /* MessagesExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = MessagesExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D39EA0E38B2195751494A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3D6751BE146045C6C827936A /* TextendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendViewController.swift; sourceTree = "<group>"; };
 		420C6F8DE06D7F4C18775228 /* Textend.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Textend.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48E3E802E284EE25B2441A11 /* TextendPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendPalette.swift; sourceTree = "<group>"; };
 		51D6A61BD2E9BD297541287E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		654566555101A3B23D2DF56B /* TextendComposerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendComposerViewModel.swift; sourceTree = "<group>"; };
+		6657ED16BAB36CC210152251 /* TextendComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendComposer.swift; sourceTree = "<group>"; };
 		7808C37B6BDF699F3BE9B601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		79DC60664401700DD74F9B72 /* DesignsStyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignsStyleKit.swift; sourceTree = "<group>"; };
 		7D9BA221055E752641659CE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B51C06FB680F153D9DC98143 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Messages.framework; sourceTree = "<group>"; };
+		8C59EA82185E0B54E302F8F1 /* TextendComposerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendComposerScreen.swift; sourceTree = "<group>"; };
+		964F711E588261924A8E6310 /* TextendStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendStyle.swift; sourceTree = "<group>"; };
+		A156F24A37C5D4D72EC58A4D /* TextendHarnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendHarnessApp.swift; sourceTree = "<group>"; };
+		A4AFCD0FDFA30D882F2BF64F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AF0A9C206C2FCACF846ED538 /* TextendSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendSnapshot.swift; sourceTree = "<group>"; };
+		B741452CA321FE2B5722703D /* TextendHarness.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = TextendHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A0145073774A1479783C0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		C7EAA47523939B897C494A62 /* TextendStyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendStyleKit.swift; sourceTree = "<group>"; };
-		EEBF60F346268F5DEB979508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		C206ABFA466FA4F49EE804B6 /* TextendRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendRenderer.swift; sourceTree = "<group>"; };
 		F3B5C274FDDCCF581AFE7453 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFrameworksBuildPhase section */
-		5AB9FFFBC0322BF13D76DF4A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				603A0AE996AC26D587E405F8 /* FirebaseAnalytics in Frameworks */,
-				DB3D5AB678F4B74643DB3410 /* Messages.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
+		09680C9E5B400431CEB9AF8F /* TextendUI */ = {
+			isa = PBXGroup;
+			children = (
+				8C59EA82185E0B54E302F8F1 /* TextendComposerScreen.swift */,
+				654566555101A3B23D2DF56B /* TextendComposerViewModel.swift */,
+				48E3E802E284EE25B2441A11 /* TextendPalette.swift */,
+			);
+			path = TextendUI;
+			sourceTree = "<group>";
+		};
 		2F81A6DEC7830E9C4FE15171 = {
 			isa = PBXGroup;
 			children = (
+				D1267F83FDF71E9E95EED15F /* Harness */,
 				D7317672EEF1EA84E66B040F /* MessagesExtension */,
+				66786CE463A9BEFE70FCF6D1 /* Sources */,
 				370029EBC71390D7BEFFF069 /* Textend */,
-				51463202AE880002D44D7017 /* Frameworks */,
 				9473FF11EAB2EC4807CE66DC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,12 +106,22 @@
 			path = Textend;
 			sourceTree = "<group>";
 		};
-		51463202AE880002D44D7017 /* Frameworks */ = {
+		66786CE463A9BEFE70FCF6D1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B51C06FB680F153D9DC98143 /* Messages.framework */,
+				E5A0F9CA6AB2C98B4874321B /* TextendCore */,
+				89C57317B95AF8ADC84D3301 /* TextendRendering */,
+				09680C9E5B400431CEB9AF8F /* TextendUI */,
 			);
-			name = Frameworks;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		89C57317B95AF8ADC84D3301 /* TextendRendering */ = {
+			isa = PBXGroup;
+			children = (
+				C206ABFA466FA4F49EE804B6 /* TextendRenderer.swift */,
+			);
+			path = TextendRendering;
 			sourceTree = "<group>";
 		};
 		9473FF11EAB2EC4807CE66DC /* Products */ = {
@@ -105,23 +129,39 @@
 			children = (
 				1F98184307A9B5E5A70889F4 /* MessagesExtension.appex */,
 				420C6F8DE06D7F4C18775228 /* Textend.app */,
+				B741452CA321FE2B5722703D /* TextendHarness.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D1267F83FDF71E9E95EED15F /* Harness */ = {
+			isa = PBXGroup;
+			children = (
+				A4AFCD0FDFA30D882F2BF64F /* Info.plist */,
+				A156F24A37C5D4D72EC58A4D /* TextendHarnessApp.swift */,
+			);
+			path = Harness;
 			sourceTree = "<group>";
 		};
 		D7317672EEF1EA84E66B040F /* MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
 				7D9BA221055E752641659CE5 /* Assets.xcassets */,
-				79DC60664401700DD74F9B72 /* DesignsStyleKit.swift */,
 				51D6A61BD2E9BD297541287E /* GoogleService-Info.plist */,
 				7808C37B6BDF699F3BE9B601 /* Info.plist */,
-				749821BB14C70CC14A8BFE21 /* MainInterface.storyboard */,
 				F3B5C274FDDCCF581AFE7453 /* MessagesViewController.swift */,
-				C7EAA47523939B897C494A62 /* TextendStyleKit.swift */,
-				3D6751BE146045C6C827936A /* TextendViewController.swift */,
 			);
 			path = MessagesExtension;
+			sourceTree = "<group>";
+		};
+		E5A0F9CA6AB2C98B4874321B /* TextendCore */ = {
+			isa = PBXGroup;
+			children = (
+				6657ED16BAB36CC210152251 /* TextendComposer.swift */,
+				AF0A9C206C2FCACF846ED538 /* TextendSnapshot.swift */,
+				964F711E588261924A8E6310 /* TextendStyle.swift */,
+			);
+			path = TextendCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,7 +173,6 @@
 			buildPhases = (
 				3D9745386552FD5A8EDE5FC4 /* Sources */,
 				91BDD6FD1C0B1A6B4E5934AF /* Resources */,
-				5AB9FFFBC0322BF13D76DF4A /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,7 +180,6 @@
 			);
 			name = MessagesExtension;
 			packageProductDependencies = (
-				CA6C3222F5208FBBED016BE0 /* FirebaseAnalytics */,
 			);
 			productName = MessagesExtension;
 			productReference = 1F98184307A9B5E5A70889F4 /* MessagesExtension.appex */;
@@ -166,6 +204,24 @@
 			productReference = 420C6F8DE06D7F4C18775228 /* Textend.app */;
 			productType = "com.apple.product-type.application.messages";
 		};
+		B9374E913C1FB8062757A947 /* TextendHarness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5779114EA1B199B6FD365C0D /* Build configuration list for PBXNativeTarget "TextendHarness" */;
+			buildPhases = (
+				5232AD742EC72402DE5FAB23 /* Sources */,
+				E55C7D41C045B51B16318B84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextendHarness;
+			packageProductDependencies = (
+			);
+			productName = TextendHarness;
+			productReference = B741452CA321FE2B5722703D /* TextendHarness.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,6 +237,9 @@
 					959FE7D546E03988D3348CFA = {
 						DevelopmentTeam = 349WFX4WJR;
 					};
+					B9374E913C1FB8062757A947 = {
+						DevelopmentTeam = 349WFX4WJR;
+					};
 				};
 			};
 			buildConfigurationList = F774C946548C82668A98F0C9 /* Build configuration list for PBXProject "Textend" */;
@@ -193,15 +252,13 @@
 			);
 			mainGroup = 2F81A6DEC7830E9C4FE15171;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-				DD7E5AD2CA1F8A1BB0602F48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				09ADD3FCDEDE67FD80C2D037 /* MessagesExtension */,
 				959FE7D546E03988D3348CFA /* Textend */,
+				B9374E913C1FB8062757A947 /* TextendHarness */,
 			);
 		};
 /* End PBXProject section */
@@ -213,7 +270,6 @@
 			files = (
 				759E5522FBB947ED4A5D5ED6 /* Assets.xcassets in Resources */,
 				7EFF5F1F35634FDF9F26FFB9 /* GoogleService-Info.plist in Resources */,
-				F385205F536B7C7F24ABFBC0 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +281,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E55C7D41C045B51B16318B84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E02845551C8517E1AF14E96F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -232,10 +296,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9CF0CA70A016467D4A8AB04 /* DesignsStyleKit.swift in Sources */,
 				E4FF0B163754FA8302ADB4CD /* MessagesViewController.swift in Sources */,
-				A8EF7150126E9319ED8B5859 /* TextendStyleKit.swift in Sources */,
-				AA662428E81E732F1AC3AB26 /* TextendViewController.swift in Sources */,
+				821C8F00987B06A8F702815B /* TextendComposer.swift in Sources */,
+				530E6A8D009FC5B26FB142B8 /* TextendComposerScreen.swift in Sources */,
+				7DB001391D9308D888FD4239 /* TextendComposerViewModel.swift in Sources */,
+				7CB42FD2BCCC0EBF595BDC48 /* TextendPalette.swift in Sources */,
+				ADB760F92F80B2C194A1D28D /* TextendRenderer.swift in Sources */,
+				CE0C5710B96A83D3EF4FDFB3 /* TextendSnapshot.swift in Sources */,
+				B872059BB6310EABEEE957E4 /* TextendStyle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5232AD742EC72402DE5FAB23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7075416850B73AC40597654E /* TextendComposer.swift in Sources */,
+				D6EDE486D418C0FDE5C1A040 /* TextendComposerScreen.swift in Sources */,
+				52C15094D7609D8CBD4B711F /* TextendComposerViewModel.swift in Sources */,
+				0A44F2453AFAC8DAE89275B0 /* TextendHarnessApp.swift in Sources */,
+				1ABFC8B9B4E194C769EC809C /* TextendPalette.swift in Sources */,
+				1F3BE410F0E33F61AD3D40A3 /* TextendRenderer.swift in Sources */,
+				651E964D59D3DF1B0F1D1504 /* TextendSnapshot.swift in Sources */,
+				50D7440EA60BDFCBEF23D25E /* TextendStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,28 +332,13 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		749821BB14C70CC14A8BFE21 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EEBF60F346268F5DEB979508 /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		24C1C18A2A4C23392B97FD79 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Messages Icon";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\".\"",
-				);
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -286,7 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = Textend/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,12 +399,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 12;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 349WFX4WJR;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -351,8 +418,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -360,7 +427,8 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -368,7 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = Textend/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,16 +447,29 @@
 			};
 			name = Debug;
 		};
+		6A2DAC69A78E4BB3C4D34564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Harness/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jwitapps.textend.harness;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		D5C0C1DAB03EE4FF05BD96C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Messages Icon";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\".\"",
-				);
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,12 +515,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 12;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 349WFX4WJR;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -448,15 +528,33 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F7555A30F15F7354E85D2A54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Harness/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jwitapps.textend.harness;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -468,6 +566,15 @@
 			buildConfigurations = (
 				3E5B9C14859520BC78015FAD /* Debug */,
 				300DBD86C4DD9F858E9B51AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5779114EA1B199B6FD365C0D /* Build configuration list for PBXNativeTarget "TextendHarness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A2DAC69A78E4BB3C4D34564 /* Debug */,
+				F7555A30F15F7354E85D2A54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -491,25 +598,6 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		DD7E5AD2CA1F8A1BB0602F48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = exactVersion;
-				version = 10.29.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CA6C3222F5208FBBED016BE0 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DD7E5AD2CA1F8A1BB0602F48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1ED5FFBC85ED0AD45B2D323C /* Project object */;
 }

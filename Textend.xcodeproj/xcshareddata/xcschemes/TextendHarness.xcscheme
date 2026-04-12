@@ -15,23 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09ADD3FCDEDE67FD80C2D037"
-               BuildableName = "MessagesExtension.appex"
-               BlueprintName = "MessagesExtension"
-               ReferencedContainer = "container:Textend.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "959FE7D546E03988D3348CFA"
-               BuildableName = "Textend.app"
-               BlueprintName = "Textend"
+               BlueprintIdentifier = "B9374E913C1FB8062757A947"
+               BuildableName = "TextendHarness.app"
+               BlueprintName = "TextendHarness"
                ReferencedContainer = "container:Textend.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "959FE7D546E03988D3348CFA"
-            BuildableName = "Textend.app"
-            BlueprintName = "Textend"
+            BlueprintIdentifier = "B9374E913C1FB8062757A947"
+            BuildableName = "TextendHarness.app"
+            BlueprintName = "TextendHarness"
             ReferencedContainer = "container:Textend.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -69,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "959FE7D546E03988D3348CFA"
-            BuildableName = "Textend.app"
-            BlueprintName = "Textend"
+            BlueprintIdentifier = "B9374E913C1FB8062757A947"
+            BuildableName = "TextendHarness.app"
+            BlueprintName = "TextendHarness"
             ReferencedContainer = "container:Textend.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -88,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "959FE7D546E03988D3348CFA"
-            BuildableName = "Textend.app"
-            BlueprintName = "Textend"
+            BlueprintIdentifier = "B9374E913C1FB8062757A947"
+            BuildableName = "TextendHarness.app"
+            BlueprintName = "TextendHarness"
             ReferencedContainer = "container:Textend.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
