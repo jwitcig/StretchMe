@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A44F2453AFAC8DAE89275B0 /* TextendHarnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156F24A37C5D4D72EC58A4D /* TextendHarnessApp.swift */; };
+		192C47120E19BB1B0FF91C98 /* TextendStretchPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5611C62AE78D78A7BCF4C5AE /* TextendStretchPreview.swift */; };
 		1ABFC8B9B4E194C769EC809C /* TextendPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E3E802E284EE25B2441A11 /* TextendPalette.swift */; };
 		1F3BE410F0E33F61AD3D40A3 /* TextendRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C206ABFA466FA4F49EE804B6 /* TextendRenderer.swift */; };
 		50D7440EA60BDFCBEF23D25E /* TextendStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F711E588261924A8E6310 /* TextendStyle.swift */; };
@@ -15,7 +16,9 @@
 		530E6A8D009FC5B26FB142B8 /* TextendComposerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C59EA82185E0B54E302F8F1 /* TextendComposerScreen.swift */; };
 		651E964D59D3DF1B0F1D1504 /* TextendSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A9C206C2FCACF846ED538 /* TextendSnapshot.swift */; };
 		7075416850B73AC40597654E /* TextendComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6657ED16BAB36CC210152251 /* TextendComposer.swift */; };
+		7576CB9863880DC3591807DD /* TextendRenderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B952E3F29D62C84B9917ED72 /* TextendRenderSpec.swift */; };
 		759E5522FBB947ED4A5D5ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D9BA221055E752641659CE5 /* Assets.xcassets */; };
+		78E9DBA4618C62D17F0E4E5D /* TextendStretchPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5611C62AE78D78A7BCF4C5AE /* TextendStretchPreview.swift */; };
 		7CB42FD2BCCC0EBF595BDC48 /* TextendPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E3E802E284EE25B2441A11 /* TextendPalette.swift */; };
 		7DB001391D9308D888FD4239 /* TextendComposerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654566555101A3B23D2DF56B /* TextendComposerViewModel.swift */; };
 		7EFF5F1F35634FDF9F26FFB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51D6A61BD2E9BD297541287E /* GoogleService-Info.plist */; };
@@ -25,6 +28,7 @@
 		B872059BB6310EABEEE957E4 /* TextendStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F711E588261924A8E6310 /* TextendStyle.swift */; };
 		CE0C5710B96A83D3EF4FDFB3 /* TextendSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A9C206C2FCACF846ED538 /* TextendSnapshot.swift */; };
 		D6EDE486D418C0FDE5C1A040 /* TextendComposerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C59EA82185E0B54E302F8F1 /* TextendComposerScreen.swift */; };
+		DAC362D6CDE31DC0860E98BD /* TextendRenderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B952E3F29D62C84B9917ED72 /* TextendRenderSpec.swift */; };
 		E02845551C8517E1AF14E96F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D39EA0E38B2195751494A5 /* Assets.xcassets */; };
 		E4FF0B163754FA8302ADB4CD /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5C274FDDCCF581AFE7453 /* MessagesViewController.swift */; };
 		E6979382A7AC64E870DF7A3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D39EA0E38B2195751494A5 /* Assets.xcassets */; };
@@ -60,6 +64,7 @@
 		420C6F8DE06D7F4C18775228 /* Textend.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Textend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E3E802E284EE25B2441A11 /* TextendPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendPalette.swift; sourceTree = "<group>"; };
 		51D6A61BD2E9BD297541287E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5611C62AE78D78A7BCF4C5AE /* TextendStretchPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendStretchPreview.swift; sourceTree = "<group>"; };
 		654566555101A3B23D2DF56B /* TextendComposerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendComposerViewModel.swift; sourceTree = "<group>"; };
 		6657ED16BAB36CC210152251 /* TextendComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendComposer.swift; sourceTree = "<group>"; };
 		7808C37B6BDF699F3BE9B601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +75,7 @@
 		A4AFCD0FDFA30D882F2BF64F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AF0A9C206C2FCACF846ED538 /* TextendSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendSnapshot.swift; sourceTree = "<group>"; };
 		B741452CA321FE2B5722703D /* TextendHarness.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = TextendHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B952E3F29D62C84B9917ED72 /* TextendRenderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendRenderSpec.swift; sourceTree = "<group>"; };
 		C1A0145073774A1479783C0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C206ABFA466FA4F49EE804B6 /* TextendRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextendRenderer.swift; sourceTree = "<group>"; };
 		F3B5C274FDDCCF581AFE7453 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 				8C59EA82185E0B54E302F8F1 /* TextendComposerScreen.swift */,
 				654566555101A3B23D2DF56B /* TextendComposerViewModel.swift */,
 				48E3E802E284EE25B2441A11 /* TextendPalette.swift */,
+				5611C62AE78D78A7BCF4C5AE /* TextendStretchPreview.swift */,
 			);
 			path = TextendUI;
 			sourceTree = "<group>";
@@ -158,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				6657ED16BAB36CC210152251 /* TextendComposer.swift */,
+				B952E3F29D62C84B9917ED72 /* TextendRenderSpec.swift */,
 				AF0A9C206C2FCACF846ED538 /* TextendSnapshot.swift */,
 				964F711E588261924A8E6310 /* TextendStyle.swift */,
 			);
@@ -301,8 +309,10 @@
 				530E6A8D009FC5B26FB142B8 /* TextendComposerScreen.swift in Sources */,
 				7DB001391D9308D888FD4239 /* TextendComposerViewModel.swift in Sources */,
 				7CB42FD2BCCC0EBF595BDC48 /* TextendPalette.swift in Sources */,
+				DAC362D6CDE31DC0860E98BD /* TextendRenderSpec.swift in Sources */,
 				ADB760F92F80B2C194A1D28D /* TextendRenderer.swift in Sources */,
 				CE0C5710B96A83D3EF4FDFB3 /* TextendSnapshot.swift in Sources */,
+				78E9DBA4618C62D17F0E4E5D /* TextendStretchPreview.swift in Sources */,
 				B872059BB6310EABEEE957E4 /* TextendStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,8 +326,10 @@
 				52C15094D7609D8CBD4B711F /* TextendComposerViewModel.swift in Sources */,
 				0A44F2453AFAC8DAE89275B0 /* TextendHarnessApp.swift in Sources */,
 				1ABFC8B9B4E194C769EC809C /* TextendPalette.swift in Sources */,
+				7576CB9863880DC3591807DD /* TextendRenderSpec.swift in Sources */,
 				1F3BE410F0E33F61AD3D40A3 /* TextendRenderer.swift in Sources */,
 				651E964D59D3DF1B0F1D1504 /* TextendSnapshot.swift in Sources */,
+				192C47120E19BB1B0FF91C98 /* TextendStretchPreview.swift in Sources */,
 				50D7440EA60BDFCBEF23D25E /* TextendStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

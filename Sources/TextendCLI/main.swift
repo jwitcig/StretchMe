@@ -20,6 +20,8 @@ struct TextendCLI {
             try printStyles()
         case "snapshot":
             try printSnapshot(arguments: arguments)
+        case "render-attachment":
+            try await renderAttachment(arguments: arguments)
         case "render-preview":
             try await renderPreview(arguments: arguments)
         default:
@@ -35,7 +37,7 @@ struct TextendCLI {
 
     private static func printSnapshot(arguments: [String]) throws {
         var text = ""
-        var style = TextendStyle.signal
+        var style = TextendStyle.light
         var index = 0
 
         while index < arguments.count {
@@ -63,7 +65,7 @@ struct TextendCLI {
 
     private static func renderPreview(arguments: [String]) async throws {
         var text = "TEXTEND"
-        var style = TextendStyle.signal
+        var style = TextendStyle.light
         var outputPath: String?
         var index = 0
 
@@ -114,6 +116,61 @@ struct TextendCLI {
         print(url.path)
     }
 
+    private static func renderAttachment(arguments: [String]) async throws {
+        var text = "TEXTEND"
+        var style = TextendStyle.light
+        var outputPath: String?
+        var index = 0
+
+        while index < arguments.count {
+            let argument = arguments[index]
+            switch argument {
+            case "--text":
+                index += 1
+                guard index < arguments.count else { throw ExitCode.failure }
+                text = arguments[index]
+            case "--style":
+                index += 1
+                guard index < arguments.count,
+                      let parsedStyle = TextendStyle(rawValue: arguments[index]) else {
+                    throw ExitCode.failure
+                }
+                style = parsedStyle
+            case "--output":
+                index += 1
+                guard index < arguments.count else { throw ExitCode.failure }
+                outputPath = arguments[index]
+            default:
+                throw ExitCode.failure
+            }
+            index += 1
+        }
+
+        guard let outputPath else { throw ExitCode.failure }
+
+        let cgImage = try await MainActor.run { () throws -> CGImage in
+            let view = TextendStretchPreview(text: text, style: style)
+                .frame(width: 348, height: 399)
+                .background(style == .dark ? Color.black : Color.white)
+            let renderer = ImageRenderer(content: view)
+            renderer.scale = 2
+
+            guard let cgImage = renderer.cgImage else { throw ExitCode.failure }
+            return cgImage
+        }
+
+        let representation = NSBitmapImageRep(cgImage: cgImage)
+        guard let data = representation.representation(using: .png, properties: [:]) else {
+            throw ExitCode.failure
+        }
+
+        let url = URL(fileURLWithPath: outputPath)
+        try FileManager.default.createDirectory(at: url.deletingLastPathComponent(), withIntermediateDirectories: true)
+        try data.write(to: url)
+
+        print(url.path)
+    }
+
     private static func writeJSON<T: Encodable>(_ value: T) throws {
         let encoder = JSONEncoder()
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
@@ -128,8 +185,9 @@ struct TextendCLI {
         let usage = """
         Usage:
           textend-cli styles
-          textend-cli snapshot --text "hello world" [--style signal|midnight|sunrise]
-          textend-cli render-preview --text "hello world" [--style signal|midnight|sunrise] --output /tmp/textend-preview.png
+          textend-cli snapshot --text "hello world" [--style light|dark]
+          textend-cli render-attachment --text "hello world" [--style light|dark] --output /tmp/textend-attachment.png
+          textend-cli render-preview --text "hello world" [--style light|dark] --output /tmp/textend-preview.png
         """
         print(usage)
     }

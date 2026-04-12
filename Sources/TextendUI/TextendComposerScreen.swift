@@ -10,7 +10,7 @@ public struct TextendComposerScreen: View {
 
     public init(
         initialText: String = "",
-        initialStyle: TextendStyle = .signal,
+        initialStyle: TextendStyle = .light,
         onInsert: @escaping (String, TextendStyle) -> Void
     ) {
         _viewModel = StateObject(wrappedValue: TextendComposerViewModel(text: initialText, selectedStyle: initialStyle))
@@ -20,28 +20,25 @@ public struct TextendComposerScreen: View {
     public var body: some View {
         GeometryReader { proxy in
             let compactLayout = proxy.size.height < 360
+            let palette = viewModel.palette
 
             ZStack {
-                LinearGradient(
-                    colors: viewModel.palette.backgroundGradient,
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-                .ignoresSafeArea()
+                palette.background.ignoresSafeArea()
 
                 ScrollView(showsIndicators: false) {
                     VStack(spacing: compactLayout ? 18 : 24) {
-                        TextendHeaderView()
+                        TextendHeaderView(palette: palette)
 
                         TextendPreviewCard(
                             text: viewModel.previewText,
-                            palette: viewModel.palette
+                            style: viewModel.selectedStyle,
+                            palette: palette
                         )
 
                         TextendInputCard(
                             text: $viewModel.text,
                             remainingCharacters: viewModel.remainingCharacterCount,
-                            palette: viewModel.palette
+                            palette: palette
                         )
 
                         TextendStylePicker(
@@ -56,7 +53,7 @@ public struct TextendComposerScreen: View {
                                 .frame(maxWidth: .infinity)
                                 .padding(.vertical, 16)
                         }
-                        .buttonStyle(TextendPrimaryButtonStyle(palette: viewModel.palette))
+                        .buttonStyle(TextendPrimaryButtonStyle(palette: palette))
                         .disabled(!viewModel.canInsert)
                         .opacity(viewModel.canInsert ? 1 : 0.55)
                     }
@@ -65,52 +62,51 @@ public struct TextendComposerScreen: View {
                 }
             }
         }
+        .preferredColorScheme(viewModel.selectedStyle == .dark ? .dark : .light)
     }
 }
 
 private struct TextendHeaderView: View {
+    let palette: TextendPalette
+
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Textend")
                 .font(.system(size: 34, weight: .black, design: .rounded))
 
-            Text("Turn a short phrase into a loud card for the conversation.")
+            Text("Stretch a short phrase into the tall image that made the app useful in the first place.")
                 .font(.system(size: 15, weight: .medium, design: .rounded))
-                .foregroundStyle(.secondary)
+                .foregroundStyle(palette.secondaryForeground)
         }
+        .foregroundStyle(palette.foreground)
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
 private struct TextendPreviewCard: View {
     let text: String
+    let style: TextendStyle
     let palette: TextendPalette
 
     var body: some View {
         RoundedRectangle(cornerRadius: 28, style: .continuous)
-            .fill(
-                LinearGradient(
-                    colors: palette.cardGradient,
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-            )
+            .fill(palette.chromeFill)
             .overlay(alignment: .topLeading) {
-                Text("LIVE PREVIEW")
+                Text("LIVE STRETCH PREVIEW")
                     .font(.system(size: 11, weight: .bold, design: .rounded))
                     .tracking(1.4)
-                    .foregroundStyle(palette.secondaryText)
+                    .foregroundStyle(palette.secondaryForeground)
                     .padding(18)
             }
             .overlay {
-                Text(text)
-                    .font(.system(size: 40, weight: .black, design: .rounded))
-                    .multilineTextAlignment(.center)
-                    .minimumScaleFactor(0.55)
-                    .foregroundStyle(palette.primaryText)
-                    .padding(28)
+                TextendStretchPreview(text: text, style: style)
+                    .padding(24)
             }
             .frame(height: 210)
+            .overlay(
+                RoundedRectangle(cornerRadius: 28, style: .continuous)
+                    .stroke(palette.chromeStroke, lineWidth: 1)
+            )
             .shadow(color: palette.shadow, radius: 20, y: 14)
     }
 }
@@ -129,25 +125,33 @@ private struct TextendInputCard: View {
                 Spacer()
                 Text("\(remainingCharacters) left")
                     .font(.system(size: 13, weight: .semibold, design: .rounded))
-                    .foregroundStyle(palette.secondaryText)
+                    .foregroundStyle(palette.secondaryForeground)
             }
 
             TextField("TYPE HERE", text: $text, axis: .vertical)
                 .focused($isFocused)
                 .font(.system(size: 30, weight: .bold, design: .rounded))
-                .foregroundStyle(palette.primaryText)
+                .foregroundStyle(palette.foreground)
                 .padding(18)
                 .background(
                     RoundedRectangle(cornerRadius: 24, style: .continuous)
-                        .fill(palette.inputFill)
+                        .fill(palette.chromeFill)
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 24, style: .continuous)
-                        .stroke(palette.inputStroke, lineWidth: 1)
+                        .stroke(palette.chromeStroke, lineWidth: 1)
                 )
         }
+        .foregroundStyle(palette.foreground)
         .padding(18)
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))
+        .background(
+            RoundedRectangle(cornerRadius: 30, style: .continuous)
+                .fill(palette.background.opacity(0.98))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 30, style: .continuous)
+                .stroke(palette.chromeStroke, lineWidth: 1)
+        )
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
                 isFocused = true
@@ -183,7 +187,7 @@ private struct TextendStylePicker: View {
                             .font(.system(size: 15, weight: .bold, design: .rounded))
                         Text(styleDescription(for: style))
                             .font(.system(size: 12, weight: .medium, design: .rounded))
-                            .foregroundStyle(style == .midnight ? Color.white.opacity(0.78) : .secondary)
+                            .foregroundStyle(style == .dark ? Color.white.opacity(0.78) : Color.black.opacity(0.62))
                             .lineLimit(2)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -201,23 +205,19 @@ private struct TextendStylePicker: View {
 
     private func styleDescription(for style: TextendStyle) -> String {
         switch style {
-        case .signal:
-            "Bright and punchy"
-        case .midnight:
-            "High-contrast night mode"
-        case .sunrise:
-            "Warm poster energy"
+        case .light:
+            "Black ink on light chrome"
+        case .dark:
+            "White ink on dark chrome"
         }
     }
 
     private func background(for style: TextendStyle) -> LinearGradient {
         switch style {
-        case .signal:
-            LinearGradient(colors: [.white.opacity(0.9), Color(red: 0.82, green: 0.95, blue: 1)], startPoint: .topLeading, endPoint: .bottomTrailing)
-        case .midnight:
-            LinearGradient(colors: [Color(red: 0.18, green: 0.21, blue: 0.34), Color(red: 0.04, green: 0.06, blue: 0.13)], startPoint: .topLeading, endPoint: .bottomTrailing)
-        case .sunrise:
-            LinearGradient(colors: [Color(red: 1, green: 0.91, blue: 0.68), Color(red: 1, green: 0.73, blue: 0.52)], startPoint: .topLeading, endPoint: .bottomTrailing)
+        case .light:
+            LinearGradient(colors: [Color.white, Color.black.opacity(0.08)], startPoint: .topLeading, endPoint: .bottomTrailing)
+        case .dark:
+            LinearGradient(colors: [Color(red: 0.18, green: 0.18, blue: 0.18), Color.black], startPoint: .topLeading, endPoint: .bottomTrailing)
         }
     }
 }

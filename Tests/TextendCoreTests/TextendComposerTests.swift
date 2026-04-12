@@ -16,17 +16,26 @@ struct TextendComposerTests {
 
     @Test
     func snapshotReflectsInsertabilityAndRemainingCount() {
-        let snapshot = TextendComposer.snapshot(text: "stretch", style: .midnight)
+        let snapshot = TextendComposer.snapshot(text: "stretch", style: .dark)
         #expect(snapshot.normalizedText == "STRETCH")
         #expect(snapshot.canInsert)
         #expect(snapshot.remainingCharacterCount == 22)
-        #expect(snapshot.style == .midnight)
+        #expect(snapshot.style == .dark)
+        #expect(snapshot.renderSpec.horizontalScale == 0.38)
+        #expect(snapshot.renderSpec.verticalScale == 12.6)
+        #expect(snapshot.renderSpec.usesDarkAppearance)
     }
 
     @Test
     func emptySnapshotCannotInsert() {
-        let snapshot = TextendComposer.snapshot(text: "", style: .signal)
+        let snapshot = TextendComposer.snapshot(text: "", style: .light)
         #expect(snapshot.canInsert == false)
         #expect(snapshot.remainingCharacterCount == TextendComposer.maximumCharacterCount)
+    }
+
+    @Test
+    func stylesMatchOriginalLightDarkModes() {
+        #expect(TextendStyle.allCases == [.light, .dark])
+        #expect(TextendComposer.renderSpec(for: .light).usesDarkAppearance == false)
     }
 }

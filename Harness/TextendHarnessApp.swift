@@ -11,8 +11,8 @@ struct TextendHarnessApp: App {
 
 private struct TextendHarnessView: View {
     @State private var insertedCards: [HarnessCard] = [
-        HarnessCard(text: "ON MY WAY", style: .signal),
-        HarnessCard(text: "RUNNING LATE", style: .midnight)
+        HarnessCard(text: "ON MY WAY", style: .light),
+        HarnessCard(text: "RUNNING LATE", style: .dark)
     ]
 
     var body: some View {
@@ -66,7 +66,7 @@ private struct TextendHarnessView: View {
                     .frame(width: 42, height: 5)
                     .padding(.top, 10)
 
-                TextendComposerScreen(initialText: "SEE YOU SOON", initialStyle: .sunrise) { text, style in
+                TextendComposerScreen(initialText: "SEE YOU SOON", initialStyle: .light) { text, style in
                     let normalized = TextendComposer.normalize(text)
                     guard !normalized.isEmpty else { return }
                     insertedCards.append(HarnessCard(text: normalized, style: style))
